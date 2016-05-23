@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一封给妈妈的不二情书</title>
+    <meta name="description" content="投资前景" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/all1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger') {
+            //window.location.href="/index.html";
+        }
+    </script>
+    <style>
+        .s1 { position: relative; background: url(img/9.jpg); background-size: 100% 100%; }
+        .s1 img { position: absolute; z-index:-3; }
+        .s1_1 {z-index:2!important; width: 100%; height: 100%; -webkit-animation: bounceIn 1s .3s linear both; }
+        .s1_2 { width: 40%; left: 30%; z-index: 10!important; bottom: 9%; -webkit-animation: fadeIn 1s 1s linear both; }
+        .s1_3 {z-index:2!important; width: 60%; left: 20%; bottom: 18%; -webkit-animation: zoomIn 1s .6s linear both; }
+    </style>
+</head>
+<body>
+    <script src="js/thelper.js" type="text/javascript"></script>
+    <header class="app-header">
+        <a href="javascript:void(0);" class="u-globalAudio z-play">
+            <audio src="" id="ttnb" preload type="audio/mpeg">
+            </audio>
+        </a>
+    </header>
+    <div class="main1">
+        <div class="s1">
+            <img src="img/9.1.png" id="s1_1" />
+            <img src="img/9.2.png" id="s1_2" />
+            <img id="s1_3" />
+        </div>
+    </div>
+    <script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+    <script src="http://ossweb-img.qq.com/images/js/motion/loader.min.js"></script>
+    <script src="http://ossweb-img.qq.com/images/js/motion/pc-prompt.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/js/share.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.PCPrompt = new mo.PCPrompt();
+        var ww = $(window).width();
+        var hh = $(window).height();
+        var isupload = true;
+        dataForWeixin.isWXShare = false;
+        var sourceArr = ['img/9.jpg', 'img/9.1.png', 'img/9.2.png'];
+        new mo.Loader(sourceArr, {
+            onLoading: function (count, total) {
+                gid('loading_per').innerHTML = Math.floor(count / total * 100) + "%";
+                //alert('加载中...（'+count/total*100+'%）');
+            }, onComplete: function (time) {
+
+                $(".s1").css({ width: ww, height: hh });
+                //alert(getUrlParam("tid"));
+                //return false;
+                if (getUrlParam("tid") != null && getUrlParam("tid") != "") {
+                    getInfo(getUrlParam("tid"));
+                } else {
+                    window.location.href = "shzsinfo.aspx";
+                };
+                gid("loading").parentNode.removeChild(gid("loading"));
+            }
+        });
+        function getInfo(tid) {
+            $.ajax({
+                type: 'POST',
+                url: "shzshelper.ashx",
+                data: {
+                    type: "GetCurInfo",
+                    tid: tid
+                },
+                dataType: "json",
+                success: function (data) {
+                    //alert(data.count);
+                    if (data.count == 1) {
+                        $("#s1_3").attr("src", "images/" + data.code);
+                        $("#ttnb").attr("src", "mp3/" + data.result);
+                        setTimeout(function () {
+                            $("#s1_1").addClass("s1_1");
+                            $("#s1_2").addClass("s1_2");
+                            $("#s1_3").addClass("s1_3");
+                            var ttn = document.getElementById("ttnb");
+                            $("#s1_2").on("touchend", function (e) {
+                                e.preventDefault();
+                                //alert($("#sec7_1").hasClass("bf"));
+                                if ($("#s1_2").hasClass("bf")) {
+                                    ttn.pause();
+                                    $("#s1_2").removeClass("bf");
+                                } else {
+                                    $("#s1_2").addClass("bf");
+                                    ttn.play();
+                                }
+                            });
+                        }, 100)
+                    } else {
+                        window.location.href = "shzsinfo.aspx";
+                    }
+                }
+            });
+        }
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURI(r[2]); return null;
+        }
+        function dialog(msg, type) {
+            window.dia1 = new mo.Dialog({
+                content: msg,
+                type: type
+            });
+        }
+    </script>
+</body>
+</html>

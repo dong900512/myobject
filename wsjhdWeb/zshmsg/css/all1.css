@@ -1,0 +1,30 @@
+﻿* { margin: 0; padding: 0; border: 0; }
+img { border: 0; vertical-align: middle; }
+ul, ol, dl { list-style: none; }
+body { font-size: 12px; font-family: arial, "Microsoft YaHei" , simsun; line-height: 20px;  background-color:#000925}
+html, body { width: 100%;  overflow: hidden; }
+.main { width: 640px; height: 100%; left: 50%; margin-left: -320px; position: absolute; overflow: hidden; }
+
+@-webkit-keyframes bounceLeft {0% {-webkit-transform: rotate(-360deg);}100% {-webkit-transform: rotate(0deg);}}
+
+@-webkit-keyframes bounceRight {0% {-webkit-transform: rotate(360deg);}100% {-webkit-transform: rotate(0deg);}}
+
+@-webkit-keyframes reverseRotataZ{0%{-webkit-transform:rotateZ(0deg)}100%{-webkit-transform:rotateZ(-360deg)}}
+
+/***加载动画background-color: rgba(0,0,0,1);**/
+.spinner { width: 200px; height: 200px; position: relative; margin: 490px auto; }
+.double-bounce1, .double-bounce2 { width: 100%; height: 100%; border-radius: 50%; background-color: #67CF22; opacity: 0.6; position: absolute; top: 0; left: 0; -webkit-animation: bounce1 2.0s infinite ease-in-out; animation: bounce1 2.0s infinite ease-in-out; }
+.double-bounce2 { -webkit-animation-delay: -1.0s; animation-delay: -1.0s; }
+
+.loading-container { width: 100%; height: 100%; }
+.loadgif { position:absolute; width: 100%; margin-top: -7%; }
+.loading_x{ position:absolute; width:100%; height:100%; -webkit-animation: show1 1s .6s linear both; background:url(/images/1.1.png); background-size:100% 100%;}
+.loading_logo{position:absolute;width:100%; height:100%;-webkit-animation: bounceInDown 1s 1.2s linear both;background:url(/images/logo.png); background-size:100% 100%;}
+
+.u-globalAudio.z-play .icon-music {-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+.m-bg-zoom{-webkit-animation: BgZoom 10s linear infinite;animation: BgZoom 10s linear infinite; -o-animation: BgZoom 10s linear infinite;}
+.u-globalAudio {left: 86%;}
+.app-header{position:fixed;top:0;width:640px;z-index:100}
+.u-globalAudio .icon-music{width:50px;height:50px;background:url(/images/units-icons.png);display:block; background-size:cover;}
+.u-globalAudio.z-play .icon-music{-webkit-animation:reverseRotataZ 1.2s linear infinite}
+.u-globalAudio{color:#fff;text-decoration:none;font-size:24px;position:fixed;bottom:28px;display:block;z-index:9999}

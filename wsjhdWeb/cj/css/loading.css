@@ -1,0 +1,98 @@
+/* CSS Document */
+/* Loading Animation*/
+
+.loading-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/signin/loading-bg.jpg) no-repeat 100% 100%;
+}
+.loading-outer,
+.loading-inner,
+.loading-logo {
+	width: 24%;
+	position: absolute;
+	top: 26%;
+	left: 38%;
+}
+.loading-outer {
+	-webkit-animation: bounceLeft 1s infinite linear;
+	animation: bounceLeft 1s infinite linear;
+}
+.loading-inner {
+	-webkit-animation: bounceRight 1s infinite linear;
+	animation: bounceRight 1s infinite linear;
+}
+.loading-text {
+	width: 21%;
+	position: absolute;
+	top: 45%;
+	left: 38%;
+}
+.loading-text {
+	-webkit-animation: fadeIn .5s linear;
+	animation: fadeIn .5s linear;
+}
+.loading-point {
+	width: 4%;
+	position: absolute;
+	top: 45%;
+	left: 59%;
+}
+.loading-point {
+	-webkit-animation: fadeIn .5s infinite linear;
+	animation: fadeIn .5s infinite linear;
+}
+@-webkit-keyframes bounceLeft {
+	0% {
+		-webkit-transform: rotate(-360deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
+}
+@keyframes bounceLeft {
+	0% {
+		-webkit-transform: rotate(-360deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes bounceRight {
+	0% {
+		-webkit-transform: rotate(360deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
+}
+@keyframes bounceRight {
+	0% {
+		-webkit-transform: rotate(360deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

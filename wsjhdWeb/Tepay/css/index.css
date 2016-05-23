@@ -1,0 +1,89 @@
+﻿html, body { width: 100%; height: 100%; overflow: hidden; max-width: 640px; }
+.hide { display: none; }
+.main { max-width: 640px; width: 100%; height: 100%;  overflow: hidden; display:none; }
+ul, ol, dl { list-style: none; }
+
+.arrows-up { position: absolute; z-index: 100000; left: 50%; margin-left: -20px; bottom: 1%;-webkit-animation:arrowsSlide 1s linear infinite }
+
+.arrowsSlide { -webkit-animation-name: arrowsSlide; animation-name: arrowsSlide; /*-webkit-animation: arrowsSlide ease-out 1s infinite; 	-webkit-animation-delay: 0.5s*/ }
+
+.pg1_1 { position: absolute; top: 0; width: 100%; height: 100%; }
+.pg1_2 { position: absolute; top: 0; width: 100%; height: 100%; }
+.pg1_3 { position: absolute; top: 0; width: 100%; height: 100%; }
+
+.pg2_1 { position: absolute; top: 0; width: 100%; height: 100%; }
+
+.gz { position: absolute; bottom: 2%; width: 34%; height: 2%; border: 0px; background: url(/tepay/img/btngz.png); background-size: 100% 100%; left: 5%;-webkit-animation:fadeInUp .3s 1.6s linear both  }
+.cj { position: absolute; bottom: 2%; width: 34%; height: 2%; right: 5%; border: 0px; background: url(/tepay/img/btncj.png); background-size: 100% 100%;-webkit-animation:fadeInUp .3s 1.7s linear both  }
+
+.sec2 { display: none; z-index: 5; position:absolute; top:0; }
+.sec2 img { width: 100%; height: 100%; position: absolute; z-index: 10; }
+.btnreturn { position: absolute; bottom: 9%; width: 34%; height: 9%; border: 0px; background: url(/tepay/img/btnreturn.png); background-size: 100% 100%; z-index: 11; margin-left: 33%; }
+
+tr td:nth-child(1) { width: 38%; font-size: 23px; color: white; height: 45px; }
+tr td:nth-child(2) { text-align: left; }
+input { width: 84%; height: 30px; line-height: 30px; font-size: 20px; }
+.jian, .jia { width: 35px; vertical-align: middle; }
+.jian { width: 35px; height: 35px; background: url(/Tepay/img/jian.png); border: 0; background-size: 100% 100%; -webkit-user-select: none; }
+.jia { width: 35px; height: 35px; background: url(/Tepay/img/jia.png); border: 0; background-size: 100% 100%;  -webkit-user-select: none;}
+.tfnum { text-align: center; width: 45%; }
+.btnsure { background-color: #ea5515; color: White; width: 80%; height: 87%; font-size: 22px; border: 0px; }
+
+.pg1 { background: url('/tepay/img/1.jpg'); background-size: 100% 100%; }
+
+.pg1 div { position: absolute; width: 100%; height: 100%; }
+.pg1_1 { background: url(/tepay/img/1.2.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s .3s linear both }
+.pg1_2 { background: url(/tepay/img/1.3.png); background-size: 100% 100%;-webkit-animation:bounceInRight .3s .6s linear both }
+.pg1_3 { background: url(/tepay/img/1.4.png); background-size: 100% 100%;-webkit-animation:zoomIn .3s 1s linear both }
+
+.pg2 { background: url(/tepay/img/2.jpg); background-size: 100% 100%;}
+.pg2 div { position: absolute; width: 100%; height: 100%; }
+.pg2_1 {background: url(/tepay/img/2.1.png); background-size: 100% 100%;-webkit-animation:zoomIn .3s  .3s linear both }
+.pg2_2 {background: url(/tepay/img/2.2.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s .3s linear both  }
+.pg2_3 { background: url(/tepay/img/2.11.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s .6s linear both}
+.pg2_4 {background: url(/tepay/img/2.9.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s .9s linear both }
+.pg2_5 {background: url(/tepay/img/2.3.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s 1.2s linear both }
+.pg2_6 {background: url(/tepay/img/2.4.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s 1.4s linear both }
+.pg2_7 {background: url(/tepay/img/2.5.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s 1.7s linear both }
+.pg2_8 {background: url(/tepay/img/2.6.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s 1.9s linear both }
+.pg2_9 { background: url(/tepay/img/2.7.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s 2.3s linear both}
+.pg2_10 {background: url(/tepay/img/2.8.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s 2.6s linear both }
+.pg2_11 { background: url(/tepay/img/2.10.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s 2.9s linear both}
+
+.pg3 { background: url(/tepay/img/3.jpg); background-size: 100% 100%; }
+.pg3 div { position: absolute; width: 100%; height: 100%; }
+.pg3_1{background: url(/tepay/img/3.11.png); background-size: 100% 100%;-webkit-animation:zoomIn .3s .3s linear both}
+.pg3_2{background: url(/tepay/img/2.2.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s .3s linear both }
+.pg3_3{background: url(/tepay/img/3.2.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s .6s linear both }
+.pg3_4{background: url(/tepay/img/3.3.png); background-size: 100% 100%;-webkit-animation:show1 .3s .9s linear both}
+.pg3_5{background: url(/tepay/img/3.4.png); background-size: 100% 100%;-webkit-animation:zoomIn .3s 1.3s linear both}
+.pg3_6{background: url(/tepay/img/3.5.png); background-size: 100% 100%;-webkit-animation:slideInDown .3s 1.6s linear both}
+.pg3_7{background: url(/tepay/img/3.6.png); background-size: 100% 100%;-webkit-animation:bounceInLeft .3s 1.9s linear both}
+.pg3_8{background: url(/tepay/img/3.8.png); background-size: 100% 100%;-webkit-animation:bounceInRight .3s 2s linear both}
+.pg3_9{background: url(/tepay/img/3.10.png); background-size: 100% 100%;-webkit-animation:tada1 .3s 2.3s linear both}
+.pg3_10{background: url(/tepay/img/3.9.png); background-size: 100% 100%;-webkit-animation:slideInUp .3s 2s linear both}
+
+
+.pg4 { background: url(/tepay/img/4.jpg); background-size: 100% 100%; }
+.pg4 div { position: absolute; width: 100%; height: 100%; }
+.pg4_1{background: url(/tepay/img/4.1.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s linear both}
+.pg4_2{background: url(/tepay/img/4.2.png); background-size: 100% 100%;-webkit-animation:show1 .3s .6s linear both }
+.pg4_3{ background: url(/tepay/img/4.3.png); background-size: 100% 100%;-webkit-animation:show1 .3s .9s linear both}
+.pg4_4{background: url(/tepay/img/4.4.png); background-size: 100% 100%;-webkit-animation:slideInUp .3s 1.2s linear both}
+.pg4_5{background: url(/tepay/img/4.5.png); background-size: 100% 100%;-webkit-animation:zoomInDown .3s 1.4s linear both}
+.pg4_6{background: url(/tepay/img/4.6.png); background-size: 100% 100%;-webkit-animation:zoomInUp .3s 1.7s linear both}
+
+.pg5 { background: url(/tepay/img/5.jpg); background-size: 100% 100%; }
+.pg5 div { position: absolute; width: 100%; height: 100%; }
+.pg5_1{background: url(/tepay/img/5.1.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s linear both}
+.pg5_2{background: url(/tepay/img/5.2.png); background-size: 100% 100%;-webkit-animation:zoomInDown .3s .6s linear both }
+.pg5_3{ background: url(/tepay/img/5.3.png); background-size: 100% 100%;-webkit-animation:zoomInUp .3s .9s linear both}
+.pg5_4{background: url(/tepay/img/5.4.png); background-size: 100% 100%;-webkit-animation:rollIn .3s 1.2s linear both}
+.pg5_5{background: url(/tepay/img/5.5.png); background-size: 100% 100%;-webkit-animation:fadeInUpBig .3s 1.4s linear both}
+
+.pg6 { background: url(/tepay/img/6.jpg); background-size: 100% 100%; }
+.pg6 div { position: absolute; width: 100%; height: 100%; }
+.pg6_1{background: url(/tepay/img/5.1.png); background-size: 100% 100%;-webkit-animation:fadeInDown .3s linear both}
+.pg6_2{background: url(/tepay/img/6.2.png); background-size: 100% 100%;-webkit-animation:show1 .3s .6s linear both }
+.pg6_3{ background: url(/tepay/img/6.3.png); background-size: 100% 100%;-webkit-animation:zoomIn .3s .9s linear both}
+.pg6_4{background: url(/tepay/img/6.4.png); background-size: 100% 100%;-webkit-animation:zoomInUp .3s 1.2s linear both}

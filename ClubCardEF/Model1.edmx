@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ClubCardDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ClubCardDBModelStoreContainer">
+          <EntitySet Name="MerchantClub" EntityType="ClubCardDBModel.Store.MerchantClub" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="MerchantClub">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="CardNum" Type="varchar(max)" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Orders" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="AddTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+          <Property Name="MerChantName" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="MerChantId" Type="int" Nullable="false" />
+          <Property Name="Extend1" Type="varchar" MaxLength="250" />
+          <Property Name="Extend2" Type="varchar" MaxLength="250" />
+          <Property Name="Extend3" Type="varchar" MaxLength="250" />
+          <Property Name="OpenId" Type="varchar(max)" />
+          <Property Name="UserNickName" Type="varchar(max)" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ClubCardDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ClubCardDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MerchantClub" EntityType="ClubCardDBModel.MerchantClub" />
+        </EntityContainer>
+        <EntityType Name="MerchantClub">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="CardNum" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Orders" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="AddTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" Nullable="false" />
+          <Property Name="MerChantName" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="MerChantId" Type="Int32" Nullable="false" />
+          <Property Name="Extend1" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Extend2" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Extend3" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="OpenId" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UserNickName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ClubCardDBModelStoreContainer" CdmEntityContainer="ClubCardDBEntities">
+          <EntitySetMapping Name="MerchantClub">
+            <EntityTypeMapping TypeName="ClubCardDBModel.MerchantClub">
+              <MappingFragment StoreEntitySet="MerchantClub">
+                <ScalarProperty Name="CardNum" ColumnName="CardNum" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AddTime" ColumnName="AddTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="MerChantName" ColumnName="MerChantName" />
+                <ScalarProperty Name="MerChantId" ColumnName="MerChantId" />
+                <ScalarProperty Name="Extend1" ColumnName="Extend1" />
+                <ScalarProperty Name="Extend2" ColumnName="Extend2" />
+                <ScalarProperty Name="Extend3" ColumnName="Extend3" />
+                <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+                <ScalarProperty Name="UserNickName" ColumnName="UserNickName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="ClubCardDBModel.MerchantClub" Width="1.5" PointX="0.75" PointY="0.75" Height="3.4981901041666665" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

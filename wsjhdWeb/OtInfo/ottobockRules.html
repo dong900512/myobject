@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>ottobock参赛规则</title>
+    <!-- <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />-->
+    <!--[if lt IE 9]>
+      <script src="/zui/lib/ieonly/html5shiv.js"></script>
+      <script src="/zui/lib/ieonly/respond.js"></script>
+      <script src="/zui/lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+    <style>
+        body { display: block !important; background-color: white; margin: 0; padding: 0; }
+        .main { width: 100%; }
+        .sy { width: 100%; }
+        .btnyes { position: absolute; width: 40%; bottom: 2%; left: 2%; }
+        .btnno { position: absolute; width: 40%; bottom: 2%; right: 2%; }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="img/sy.jpg" class="sy" />
+        <img src="img/yes.png" class="btnyes" />
+        <img src="img/no.png" class="btnno" />
+    </div>
+</body>
+<script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/motion/pc-prompt.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/js/share.js" type="text/javascript"></script>
+<script>
+
+    window.PCPrompt = new mo.PCPrompt();
+    dataForWeixin.title = "ottobock参赛规则";
+    dataForWeixin.desc = "ottobock参赛规则";
+    $(function () {
+        $(".btnyes").tap(function () {
+            alert("确认");
+        });
+        $(".btnno").tap(function () {
+            wx.closeWindow();
+        });
+    })
+</script>
+</html>

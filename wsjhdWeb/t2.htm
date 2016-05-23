@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乾景雅园-品牌咨询</title>
+    <meta name="description" content="投资前景" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <style>
+        html, body { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <div class="info0">
+    </div>
+    <div class="info1">
+    </div>
+    <div class="info2">
+    </div>
+    <script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var e = this;
+            this.timer1 = null;
+            this.timer2 = null;
+            this.timer3 = null;
+            this.timer4 = null;
+            this.timer5 = null;
+            this.timer6 = null;
+            this.timer7 = null;
+            this.flag = !0;
+            this.shadeFlag = !1;
+            this.shadeFlag1 = !0;
+            var n = 0, a = 0;
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', DeviceOrientationHandler, false);
+            } else {
+                alert("您的浏览器不支持DeviceOrientation");
+            }
+            //            window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
+            //                alert(window.orientation);
+            //                if (window.orientation == 180) {
+            //                    alert("123");
+            //                }
+            //            }, false);
+        })
+        function DeviceOrientationHandler(event) {
+            var alpha = event.alpha,
+            n = beta = Math.round(event.beta),
+            a = gamma = Math.round(event.gamma);
+
+            if (alpha != null || beta != null || gamma != null) {
+                $(".info0").html("alpha:" + alpha + "<br />beta:" + beta + "<br />gamma:" + gamma);
+                //判断屏幕方向
+                var html = "";
+                if (parseInt(n) <= 0) {
+                    //alert("123");
+                    $(".info2").html("2");
+                } else {
+                    $(".info2").html("1");
+                    //alert("456");
+                }
+                //                if (Math.abs(gamma) < GAMMA_MIN && Math.abs(beta) > BETA_MAX) {
+                //                    html = "屏幕方向：Portrait";
+                //                }
+
+                //                if (Math.abs(beta) < BETA_MIN && Math.abs(gamma) > GAMMA_MAX) {
+                //                    html = "屏幕方向：Landscape";
+                //                //                }
+                //              0 > n && 0 > a || 0 > n && a > 0 ? (e.flag && !e.shadeFlag && (clearTimeout(e.timer6), e.flag = !1, e.timer5 = setTimeout(function() {
+                //                //e.animate0()
+                //                alert("345");
+                //            },
+                //            1e3)), e.shadeFlag && e.shadeFlag1 && (e.shadeFlag1 = !1, e.timer7 = setTimeout(function() {
+                //                
+                //            },
+                //            1e3))) : (n > 0 && a > 0 || n > 0 && 0 > a) && (e.flag || e.shadeFlag || (clearTimeout(e.timer5), e.flag = !0, e.timer6 = setTimeout(function() {
+                ////                e.animate2()
+                //alert("123");
+                //            },
+                //            1e3)), e.shadeFlag && e.shadeFlag1 && (e.shadeFlag1 = !1, e.timer7 = setTimeout(function() {
+                //                
+                //            },
+                //            1e3)))
+                //        }
+                //        !0),
+
+                var gamma_html = "";
+                if (gamma > 0) {
+                    gamma_html = "向右倾斜";
+                } else {
+                    gamma_html = "向左倾斜";
+                }
+                html += "<br />" + gamma_html
+                $(".info1").html(html);
+            } else {
+                alert("当前浏览器不支持DeviceOrientation");
+            }
+        }
+        //        if (window.orientation == 90 || window.orientation == -90) {
+        //            document.querySelector("#vspromps").style.display = "block";
+        //        }
+    </script>
+</body>
+</html>
