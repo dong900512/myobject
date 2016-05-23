@@ -7,5 +7,6 @@ namespace WXEF
 {
     public class Class1
     {
+        public int t_Id { get; set; }
     }
 }
