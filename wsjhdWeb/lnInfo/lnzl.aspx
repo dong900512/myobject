@@ -67,6 +67,11 @@
             100% { background: url(img/fx1.png); background-size: 100% 100%; }
         }
 
+        @-webkit-keyframes st7 {
+            0% { -webkit-transform: translate3d(0,5%, 0); opacity: 1; }
+            100% { -webkit-transform: translate3d(0,25%, 0); opacity: 1; }
+        }
+
         body { margin: 0; padding: 0; }
         ul, ol, dl { list-style: none; -webkit-padding-start: 0px; }
         body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, img, button { padding: 0; margin: 0; }
@@ -116,7 +121,7 @@
         .xpl2 { color: #631811; font-weight: 500; padding-top: 1rem; padding-left: 0.6rem; float: left; }
         .pl-return { width: 20%; height: 2rem; text-align: center; float: right; margin-top: 0.8rem; margin-right: 1.3rem; background-color: #ca762c; border-radius: 0.4rem; line-height: 2rem; }
         .pl-content { width: 90%; margin-left: 5%; height: 8.71rem; border: 1px solid #d6d6d6; padding: 0.1rem; font-size: 100%; resize: none; }
-        .submitBtn { width: 50%; height: 2rem; background-color: #ca762c; margin-left: 25%; border-radius: 0.15rem; margin-top: 0.6rem; margin-bottom: 0.6rem; text- align: center; line-height: 2rem; color: white; font-weight: bold; font-size: 100%; }
+        .submitBtn { width: 50%; height: 2rem; background-color: #ca762c; margin-left: 25%; border-radius: 0.15rem; margin-top: 0.6rem; margin-bottom: 0.6rem; text-align: center; line-height: 2rem; color: white; font-weight: bold; font-size: 100%; }
         .divName { width: 90%; height: 2rem; border: 1px solid #ca762c; border-radius: 0.1rem; margin-top: 0.8rem; margin-left: 5%; font-size: 100%; }
         .inputPhone { width: 70%; height: 100%; line-height: 2rem; margin-left: 0.2rem; font-size: 100%; }
         .pphone { float: left; height: 100%; line-height: 2rem; margin-left: 0.2rem; color: #ca762c; }
@@ -140,6 +145,7 @@
 
         .fgx { width: 100%; }
         .skipBtn { position: absolute; width: 12% !important; height: auto !important; z-index: 10 !important; right: 1%; }
+        .xl { width: 5%; height: auto; font-family: 'Microsoft JhengHei'; font-weight: bold; font-size: 1.3rem; color: red; position: absolute; top: 5%; left: 4%; -webkit-animation: st7 1s infinite alternate; }
     </style>
 </head>
 <body>
@@ -185,7 +191,7 @@
         <div class="s1" id="s1">
             <img src="img/6.jpg" style="width: 100%;" class="st1" />
             <img src="img/fx.png" class="s1_fx" />
-
+            <div class="xl">下拉查看梦想排行榜</div>
             <img src="img/gz.png" class="btngz" />
             <img src="img/mx.png" class="btnmx" />
             <img src="img/tips.jpg" style="width: 100%" />
@@ -480,7 +486,7 @@
                             $(".l5 img").css("opacity", "1");
                             $("#l5_1").addClass("l5_1");
                             $("#l5_2").addClass("l5_2");
-                            document.getElementById("l5_2").addEventListener("webkitAnimationEnd", function
+                            document.getElementById("l5_2").addEventListener("webkitAnimationEnd", function 
 () {
                                 setTimeout(function () {
                                     $(".skipBtn").hide();
