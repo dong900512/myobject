@@ -520,6 +520,7 @@
     <Content Include="lnInfo\img\fx.png" />
     <Content Include="lnInfo\img\gz.png" />
     <Content Include="lnInfo\img\mx.png" />
+    <Content Include="lnInfo\img\ph.png" />
     <Content Include="lnInfo\img\tips.jpg" />
     <Content Include="lnInfo\img\units-icons.png" />
     <Content Include="lnInfo\js\thelper.js" />

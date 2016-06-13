@@ -146,6 +146,7 @@
         .fgx { width: 100%; }
         .skipBtn { position: absolute; width: 12% !important; height: auto !important; z-index: 10 !important; right: 1%; }
         .xl { width: 5%; height: auto; font-family: 'Microsoft JhengHei'; font-weight: bold; font-size: 1.3rem; color: red; position: absolute; top: 5%; left: 4%; -webkit-animation: st7 1s infinite alternate; }
+        .ph { width: 13%; margin-top: 12%; position: absolute; height: auto; -webkit-animation: st7 1s infinite alternate; }
     </style>
 </head>
 <body>
@@ -191,7 +192,7 @@
         <div class="s1" id="s1">
             <img src="img/6.jpg" style="width: 100%;" class="st1" />
             <img src="img/fx.png" class="s1_fx" />
-            <div class="xl">下拉查看梦想排行榜</div>
+            <img src="img/ph.png" class="ph" />
             <img src="img/gz.png" class="btngz" />
             <img src="img/mx.png" class="btnmx" />
             <img src="img/tips.jpg" style="width: 100%" />

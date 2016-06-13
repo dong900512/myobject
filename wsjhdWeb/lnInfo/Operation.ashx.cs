@@ -12,6 +12,8 @@ using Webdiyer.WebControls.Mvc;
 using System.Data.SqlClient;
 using Dos.Common;
 using Dos.ORM;
+using System.Data;
+
 namespace NewInfoWeb.lnInfo
 {
     /// <summary>
@@ -256,6 +258,9 @@ namespace NewInfoWeb.lnInfo
                   .Where(s => s.Extend2.Equals("108"))
                   .OrderBy(Dos.Model.HdPic._.Orders.Desc, Dos.Model.HdPic._.UpdateTime.Asc);
                 var list = fromsection.Page(pagesize, tmpage).ToList();
+                //DbSession.Default.FromSql("select row from (select row_number() over (order by orders desc,updatetime asc) row,extend1 from hdpic where Extend2='108') newtable where extend1=@extend1").AddInParameter("@extend1", DbType.String, "321").ToScalar();
+                //SqlSection str = new SqlSection();
+                //str.(DbSession)
                 //IQueryable<HdPic> list = db.HdPic.OrderByDescending(s => s.Orders).ThenBy(s => s.UpdateTime).Where(s => s.Extend2.Equals("108"));
                 //var dblist = list.ToPagedList(tmpage, pagesize);
 
