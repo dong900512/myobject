@@ -173,6 +173,11 @@
     <Content Include="bin\Util.dll" />
     <Content Include="bin\WXEF.dll" />
     <Content Include="bin\WXEF.pdb" />
+    <Content Include="ChinaTele\img\btnfh.png" />
+    <Content Include="ChinaTele\img\btnmore.png" />
+    <Content Include="ChinaTele\img\d1.jpg" />
+    <Content Include="ChinaTele\img\d2.jpg" />
+    <Content Include="ChinaTele\indenx.html" />
     <Content Include="cj\cj2.htm" />
     <Content Include="cj\cj3.htm" />
     <Content Include="cj\css\bootstrap.css" />
@@ -523,8 +528,57 @@
     <Content Include="lnInfo\img\ph.png" />
     <Content Include="lnInfo\img\tips.jpg" />
     <Content Include="lnInfo\img\units-icons.png" />
+    <Content Include="lnInfo\img\xy\1.1.png" />
+    <Content Include="lnInfo\img\xy\1.10.png" />
+    <Content Include="lnInfo\img\xy\1.11.png" />
+    <Content Include="lnInfo\img\xy\1.12.png" />
+    <Content Include="lnInfo\img\xy\1.2.png" />
+    <Content Include="lnInfo\img\xy\1.3.png" />
+    <Content Include="lnInfo\img\xy\1.4.png" />
+    <Content Include="lnInfo\img\xy\1.5.png" />
+    <Content Include="lnInfo\img\xy\1.6.png" />
+    <Content Include="lnInfo\img\xy\1.7.png" />
+    <Content Include="lnInfo\img\xy\1.8.png" />
+    <Content Include="lnInfo\img\xy\1.9.png" />
+    <Content Include="lnInfo\img\xy\1.jpg" />
+    <Content Include="lnInfo\img\xy\2.jpg" />
+    <Content Include="lnInfo\img\xy\3.1.png" />
+    <Content Include="lnInfo\img\xy\3.2.png" />
+    <Content Include="lnInfo\img\xy\3.3.png" />
+    <Content Include="lnInfo\img\xy\3.jpg" />
+    <Content Include="lnInfo\img\xy\4.1.png" />
+    <Content Include="lnInfo\img\xy\4.jpg" />
+    <Content Include="lnInfo\img\xy\5.1.png" />
+    <Content Include="lnInfo\img\xy\5.jpg" />
+    <Content Include="lnInfo\img\xy\b1.png" />
+    <Content Include="lnInfo\img\xy\b2.png" />
+    <Content Include="lnInfo\img\xy\b3.png" />
+    <Content Include="lnInfo\img\xy\b4.png" />
+    <Content Include="lnInfo\img\xy\b5.png" />
+    <Content Include="lnInfo\img\xy\b6.png" />
+    <Content Include="lnInfo\img\xy\b7.png" />
+    <Content Include="lnInfo\img\xy\bg1.jpg" />
+    <Content Include="lnInfo\img\xy\bigfx.png" />
+    <Content Include="lnInfo\img\xy\btnbm.png" />
+    <Content Include="lnInfo\img\xy\btncy.png" />
+    <Content Include="lnInfo\img\xy\btnfh.png" />
+    <Content Include="lnInfo\img\xy\btnsure.png" />
+    <Content Include="lnInfo\img\xy\btnyq.png" />
+    <Content Include="lnInfo\img\xy\fxs.jpg" />
+    <Content Include="lnInfo\img\xy\gz.jpg" />
+    <Content Include="lnInfo\img\xy\inpxm.png" />
+    <Content Include="lnInfo\img\xy\intphone.png" />
+    <Content Include="lnInfo\img\xy\jx.jpg" />
+    <Content Include="lnInfo\img\xy\btnjx.png" />
+    <Content Include="lnInfo\img\xy\phbj.jpg" />
+    <Content Include="lnInfo\img\xy\sl.png" />
+    <Content Include="lnInfo\img\xy\sm.png" />
+    <Content Include="lnInfo\img\xy\util.png" />
     <Content Include="lnInfo\js\thelper.js" />
     <Content Include="lnInfo\lnzl.aspx" />
+    <Content Include="lnInfo\t1.html" />
+    <Content Include="lnInfo\xydzinfo.aspx" />
+    <Content Include="lnInfo\xyindex.aspx" />
     <Content Include="OtInfo\img\no.png" />
     <Content Include="OtInfo\img\sy.jpg" />
     <Content Include="OtInfo\img\yes.png" />
@@ -1109,6 +1163,20 @@
     <Compile Include="lnInfo\Operation.ashx.cs">
       <DependentUpon>Operation.ashx</DependentUpon>
     </Compile>
+    <Compile Include="lnInfo\xydzinfo.aspx.cs">
+      <DependentUpon>xydzinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lnInfo\xydzinfo.aspx.designer.cs">
+      <DependentUpon>xydzinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lnInfo\xyindex.aspx.cs">
+      <DependentUpon>xyindex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lnInfo\xyindex.aspx.designer.cs">
+      <DependentUpon>xyindex.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1318,6 +1386,7 @@
     <Content Include="yqh\helper.ashx" />
     <Content Include="Tepay\payhelperinfo.ashx" />
     <Content Include="lnInfo\Operation.ashx" />
+    <Content Include="lnInfo\css\tt0037m_.ttf" />
     <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
     <None Include="yqh\cert1\apiclient_cert.p12" />
     <None Include="yqh\cert1\apiclient_cert.pem" />

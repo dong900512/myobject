@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>中国电信国际业务推介会</title>
+    <link href="/zui/css/zui.min.css" rel="stylesheet" />
+    <!-- <link href="css/swiper.min.css" rel="stylesheet" type="text/css" />-->
+    <!--[if lt IE 9]>
+      <script src="/zui/lib/ieonly/html5shiv.js"></script>
+      <script src="/zui/lib/ieonly/respond.js"></script>
+      <script src="/zui/lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+    <style>
+        body { display: block !important; background-color: black; max-width: 640px; margin: 0 auto; }
+        ::-webkit-scrollbar { width: 0px; height: 0px; }
+        .btnmore { margin-top: -18%; width: 60%; margin-left: 20%; }
+        .s2 { position: absolute; display: none; top: 0; left: 0; }
+        .btnfh { margin-top: -12%; width: 50%; margin-left: 25%; }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <div class="s1"></div>
+        <img src="img/d1.jpg" />
+        <img src="img/btnmore.png" class="btnmore" />
+        <div class="s2">
+            <img src="img/d2.jpg" />
+            <img src="img/btnfh.png" class="btnfh" />
+        </div>
+    </div>
+</body>
+<script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/js/share.js" type="text/javascript"></script>
+<script type="text/javascript">
+    dataForWeixin.img = "http://wsjhb.tencenthouse.com/chinatele/img/fxs.jpg";
+    dataForWeixin.desc = "中国电信国际业务推介会";
+    dataForWeixin.title = "中国电信国际业务推介会";
+
+    $(function () {
+        $(".btnmore").tap(function () {
+            gotoTop();
+            $(".s1").fadeOut("slow", function () {
+                $(".s2").fadeIn();
+            });
+
+        });
+        $(".btnfh").tap(function () {
+            gotoTop();
+            $(".s2").fadeOut("slow", function () {
+                $(".s1").fadeIn();
+            });
+        });
+    })
+    function gotoTop(speed, time) {
+        speed = speed || 0.1;
+        time = time || 16;
+        // 滚动条到页面顶部的水平距离
+        var x = document.body.scrollLeft;
+        // 滚动条到页面顶部的垂直距离
+        var y = document.body.scrollTop;
+        // 滚动距离 = 目前距离 / 速度, 因为距离原来越小, 速度是大于 1 的数, 所以滚动距离会越来越小
+        speed++;
+        window.scrollTo(Math.floor(x / speed), Math.floor(y / speed));
+        // 如果距离不为零, 继续调用迭代本函数
+        if (x > 0 || y > 0) {
+            window.setTimeout("gotoTop(" + speed + ", " + time + ")", time);
+        }
+    }
+</script>
+</html>

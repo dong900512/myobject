@@ -1,0 +1,66 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>象屿●上海年华</title>
+    <meta name="description" content="上海年华" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        @-webkit-keyframes run1 {
+            0% { background: url(img/xy/b1.png); background-size: 100% 100%; width: 100%; height: 100%; }
+            16% { background: url(img/xy/b2.png); background-size: 100% 100%; width: 100%; height: 100%; }
+            33% { background: url(img/xy/b3.png); background-size: 100% 100%; width: 100%; height: 100%; }
+            49% { background: url(img/xy/b4.png); background-size: 100% 100%; width: 100%; height: 100%; }
+            64% { background: url(img/xy/b5.png); background-size: 100% 100%; width: 100%; height: 100%; }
+            80% { background: url(img/xy/b6.png); background-size: 100% 100%; width: 100%; height: 100%; }
+            100% { background: url(img/xy/b7.png); background-size: 100% 100%; width: 100%; height: 100%; }
+        }
+
+        @-webkit-keyframes arrowtop {
+            0% { -webkit-transform: translate3d(0,50%, 0); opacity: 1; }
+            100% { -webkit-transform: translate3d(0, 0, 0); opacity: 0; }
+        }
+
+        @font-face { font-family: "ces"; src: "css/tt0037m_.ttf"; }
+
+        @-webkit-keyframes ss1 {
+            0% { opacity: .4; }
+            100% { opacity: 1; }
+        }
+
+        @-webkit-keyframes fd1 {
+            0% { -webkit-transform: translate3d(0,-10%,0); opacity: 0; }
+            100% { -webkit-transform: translate3d(0,0,0); opacity: 1; }
+        }
+
+        .u-globalAudio.z-play .icon-music { -webkit-animation: reverseRotataZ 1.2s linear infinite; }
+        .m-bg-zoom { -webkit-animation: BgZoom 10s linear infinite; animation: BgZoom 10s linear infinite; -o-animation: BgZoom 10s linear infinite; }
+        .u-globalAudio { left: 86%; }
+        .app-header { position: fixed; top: 0; z-index: 100; }
+        .u-globalAudio .icon-music { width: 30px; height: 30px; background: url(img/xy/util.png); display: block; background-size: 100% 100%; }
+        .u-globalAudio.z-play .icon-music { -webkit-animation: reverseRotataZ 1.2s linear infinite; }
+        .u-globalAudio { color: #fff; text-decoration: none; font-size: 24px; position: fixed; top: 2%; display: block; z-index: 9999; }
+        body { margin: 0; padding: 0; width: 100%; height: 100%; }
+        .load { position: absolute; width: 100%; height: 100%; background: url(img/xy/bg1.jpg); background-size: 100% 100%; overflow: hidden }
+            .load div { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+        .loading { background: url(img/xy/b1.png); background-size: 100% 100%;-webkit-animation: run1 ease-in infinite 4s; }
+        /*-webkit-animation: run1 ease-in infinite 4s;*/
+    </style>
+</head>
+<body>
+    <header class="app-header">
+        <a href="javascript:void(0);" class="u-globalAudio z-play">
+            <audio src="" loop="" src="" id="ttnb" autoplay="" preload type="audio/mpeg"></audio>
+        </a>
+    </header>
+    <div class="load">
+        <div class="loading"></div>
+    </div>
+</body>
+</html>
