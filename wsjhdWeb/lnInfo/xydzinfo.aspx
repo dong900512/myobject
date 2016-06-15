@@ -290,7 +290,13 @@
             });
         }
         function changhits() {
+            window.overlay1 = new mo.Overlay({
+                content: "星星摘取中，请稍后...",
+                valign: 'top',
+                offset: [0, 10]
+            });
             $.post("Operation.ashx", { type: "HDXYOtherZan", tmpid: $("#hidid").val(), curXYDZAre: $("#hid4").val(), curXYDZAreTid: $("#hid5").val() }, function (result) {
+                overlay1.close();
                 //alert(result);
                 if (result.ist == "0") {
                     showDialog('网络错误，请重试');
@@ -311,7 +317,7 @@
                     showDialog('网络错误，请重试');
                     return false;
                 } else if (result.ist == "5") {
-                    showDialog('您已点赞成功,不能重复点赞！');
+                    showDialog('您已帮助ta成功摘取了一颗星星,不能贪心哦！');
                     return false;
                 }
                 //if (result.ist == "1") {

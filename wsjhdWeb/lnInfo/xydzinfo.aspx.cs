@@ -60,8 +60,12 @@ namespace NewInfoWeb.lnInfo
                             }
                             else
                             {
-                                stnickname = model.Name;
+                                stnickname = Common.CryptHelper.DESEncrypt.Decrypt(model.Name, WebConfigurationManager.AppSettings["PassWordKey"]);
                             }
+                        }
+                        else
+                        {
+                            jsHint.toUrl("xyindex.aspx");
                         }
                         //using (WXDBEntities db = new WXDBEntities())
                         //{

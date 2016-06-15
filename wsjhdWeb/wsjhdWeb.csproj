@@ -540,6 +540,7 @@
     <Content Include="lnInfo\img\xy\1.7.png" />
     <Content Include="lnInfo\img\xy\1.8.png" />
     <Content Include="lnInfo\img\xy\1.9.png" />
+    <Content Include="lnInfo\img\xy\1.gif" />
     <Content Include="lnInfo\img\xy\1.jpg" />
     <Content Include="lnInfo\img\xy\2.jpg" />
     <Content Include="lnInfo\img\xy\3.1.png" />
@@ -550,6 +551,16 @@
     <Content Include="lnInfo\img\xy\4.jpg" />
     <Content Include="lnInfo\img\xy\5.1.png" />
     <Content Include="lnInfo\img\xy\5.jpg" />
+    <Content Include="lnInfo\img\xy\b1.1.png" />
+    <Content Include="lnInfo\img\xy\b1.10.png" />
+    <Content Include="lnInfo\img\xy\b1.2.png" />
+    <Content Include="lnInfo\img\xy\b1.3.png" />
+    <Content Include="lnInfo\img\xy\b1.4.png" />
+    <Content Include="lnInfo\img\xy\b1.5.png" />
+    <Content Include="lnInfo\img\xy\b1.6.png" />
+    <Content Include="lnInfo\img\xy\b1.7.png" />
+    <Content Include="lnInfo\img\xy\b1.8.png" />
+    <Content Include="lnInfo\img\xy\b1.9.png" />
     <Content Include="lnInfo\img\xy\b1.png" />
     <Content Include="lnInfo\img\xy\b2.png" />
     <Content Include="lnInfo\img\xy\b3.png" />
@@ -559,6 +570,10 @@
     <Content Include="lnInfo\img\xy\b7.png" />
     <Content Include="lnInfo\img\xy\bg1.jpg" />
     <Content Include="lnInfo\img\xy\bigfx.png" />
+    <Content Include="lnInfo\img\xy\bs.1.png" />
+    <Content Include="lnInfo\img\xy\bs.2.png" />
+    <Content Include="lnInfo\img\xy\bs.3.png" />
+    <Content Include="lnInfo\img\xy\bs.4.png" />
     <Content Include="lnInfo\img\xy\btnbm.png" />
     <Content Include="lnInfo\img\xy\btncy.png" />
     <Content Include="lnInfo\img\xy\btnfh.png" />

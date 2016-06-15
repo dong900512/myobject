@@ -116,7 +116,7 @@ namespace NewInfoWeb.lnInfo
                 else
                 {
                     opid = result.openid;
-                    ctname = userInfo.nickname;
+                    ctname = Common.CryptHelper.DESEncrypt.Encrypt(userInfo.nickname, WebConfigurationManager.AppSettings["PassWordKey"]);
                     ctimgurl = userInfo.headimgurl;
                 }
             }

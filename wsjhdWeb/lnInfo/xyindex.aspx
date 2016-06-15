@@ -24,6 +24,27 @@
             100% { background: url(img/xy/b7.png); background-size: 100% 100%; }
         }
 
+        @-webkit-keyframes run2 {
+            0% { background: url(img/xy/b1.9.png); background-size: 100% 100%; }
+            100% { background: url(img/xy/b1.10.png); background-size: 100% 100%; }
+        }
+
+        @-webkit-keyframes run3 {
+            0% { background: url(img/xy/bs.1.png); background-size: 100% 100%; }
+            50% { background: url(img/xy/bs.2.png); background-size: 100% 100%; }
+            75% { background: url(img/xy/bs.3.png); background-size: 100% 100%; }
+            100% { background: url(img/xy/bs.4.png); background-size: 100% 100%; }
+        }
+
+        @-webkit-keyframes run4 {
+            16% { background: url(img/xy/b1.3.png); background-size: 100% 100%; }
+            33% { background: url(img/xy/b1.4.png); background-size: 100% 100%; }
+            49% { background: url(img/xy/b1.5.png); background-size: 100% 100%; }
+            64% { background: url(img/xy/b1.6.png); background-size: 100% 100%; }
+            80% { background: url(img/xy/b1.7.png); background-size: 100% 100%; }
+            100% { background: url(img/xy/b1.8.png); background-size: 100% 100%; }
+        }
+
         @-webkit-keyframes arrowtop {
             0% { -webkit-transform: translate3d(0,50%, 0); opacity: 1; }
             100% { -webkit-transform: translate3d(0, 0, 0); opacity: 0; }
@@ -34,6 +55,11 @@
         @-webkit-keyframes ss1 {
             0% { opacity: .4; }
             100% { opacity: 1; }
+        }
+
+        @-webkit-keyframes down1 {
+            0% { -webkit-transform: translate3d(0,0,0); opacity: 1; }
+            100% { -webkit-transform: translate3d(15%,80%,0); opacity: 1; }
         }
 
         @-webkit-keyframes fd1 {
@@ -51,7 +77,7 @@
         body { margin: 0; padding: 0; width: 100%; height: 100%; }
         .load { position: relative; width: 100%; height: 100%; background: url(img/xy/bg1.jpg); background-size: 100% 100%; }
 
-        .loading { position: absolute; width: 100%; height: 100%; -webkit-animation: run1 ease-in infinite 4s; }
+        .loading { position: absolute; width: 100%; height: 100%; background: url(img/xy/b1.png); background-size: 100% 100%; -webkit-animation: run1 ease-in infinite 4s; }
         .s1 { display: none; top: 0; left: 0; position: relative; background: url(img/xy/1.jpg); background-size: 100% 100%; overflow: hidden; }
 
             .s1 img, .s2 img { position: absolute; width: 100%; height: 100%; }
@@ -96,21 +122,30 @@
         .s2_10 { top: 6%; right: 71%; }
         .s2_11 { top: 14%; left: 10%; }
         .s2_12 { top: 22%; left: 15%; }
+        .s2_6_1 { -webkit-animation: down1 2s linear both; }
         .s2_13 { width: 25% !important; height: auto !important; }
         .divph { position: absolute; top: 0; left: 0; z-index: 300; background: url(img/xy/phbj.jpg); background-size: 100% 100%; display: none; }
         .itmlist { width: 90%; position: absolute; z-index: 10%; left: 5%; height: 54%; font: 12px/1.5 tahoma, '\5b8b\4f53',sans-serif; overflow-y: auto; -webkit-overflow-scrolling: touch; bottom: 14%; }
             .itmlist dd { width: 100%; -webkit-margin-start: 0px; overflow: hidden; }
-                .itmlist dd span:nth-child(1) { float: left; text-align: center; width: 17.3%; color: white; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: 'Microsoft YaHei'; margin-top: 10%; }
+                .itmlist dd span:nth-child(1) { float: left; text-align: center; width: 17.3%; color: white; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: 'Microsoft YaHei'; margin-top: 5%; }
                 .itmlist dd span:nth-child(2) { float: left; text-align: center; width: 28.3%; color: white; font-family: 'Microsoft YaHei'; margin-bottom: 2%; margin-top: 2%; }
-                    .itmlist dd span:nth-child(2) img { width: 90%; border-radius: 90%; }
-                .itmlist dd span:nth-child(3) { float: left; text-align: center; width: 29.3%; color: white; overflow: hidden; font-family: 'Microsoft YaHei'; margin-top: 10%; max-height: 22%; }
-                .itmlist dd span:nth-child(4) { float: left; text-align: center; width: 22.3%; color: white; overflow: hidden; font-family: 'Microsoft YaHei'; margin-top: 10%; }
+                    .itmlist dd span:nth-child(2) img { width: 50%; border-radius: 50%; }
+                .itmlist dd span:nth-child(3) { float: left; text-align: center; width: 29.3%; color: white; overflow: hidden; font-family: 'Microsoft YaHei'; margin-top: 5%; max-height: 22%; }
+                .itmlist dd span:nth-child(4) { float: left; text-align: center; width: 22.3%; color: white; overflow: hidden; font-family: 'Microsoft YaHei'; margin-top: 5%; }
             .itmlist span:nth-child(4)::after { clear: both; }
         .clearinfo { clear: both; border: 1px dashed white; width: 100%; }
         .s3 { display: none; top: 0; left: 0; position: relative; background: url(img/xy/5.jpg); background-size: 100% 100%; overflow: hidden; }
             .s3 img { position: absolute; }
         .s3_1 { bottom: 5%; width: 24%; left: 15%; }
         .arraw { display: none; margin: 0 auto; -webkit-animation: arrowtop 1s ease-out infinite; z-index: 150; margin-left: 45%; width: 10%; bottom: 2%; position: absolute; }
+
+        .load img, .load div { width: 100%; height: 100%; position: absolute; }
+        .dlx { background: url(img/xy/b1.9.png); background-size: 100% 100%; -webkit-animation: run2 2s ease-in infinite; }
+        .star1 { background: url(img/xy/bs.1.png); background-size: 100% 100%; -webkit-animation: run3 4s ease-in infinite; }
+        .l1_1 { -webkit-animation: fd1 1s .3s linear both; }
+        .l1_2 { -webkit-animation: fadeIn 1s 1.3s linear both; }
+        .xlx { background: url(img/xy/b1.3.png); background-size: 100% 100%; -webkit-animation: run4 4s ease-in infinite; }
+        #xlx, #dlx, #star1, #loading { display: none; }
         /*.s1*/
     </style>
 </head>
@@ -122,7 +157,13 @@
         </a>
     </header>
     <div class="load">
-        <div class="loading"></div>
+        <%--<img src="img/xy/1.gif" />--%>
+        <img src="img/xy/b1.1.png" class="l1_1" />
+        <img src="img/xy/b1.2.png" id="l1_2" class="l1_2" />
+        <div id="xlx"></div>
+        <div id="dlx"></div>
+        <div id="star1"></div>
+        <div id="loading"></div>
     </div>
     <div class="s1">
         <img src="img/xy/1.1.png" class="s1_1" />
@@ -277,41 +318,50 @@
             })
         }
 
-        var sourceArr = ['img/4.mp3', 'img/xy/bg1.jpg', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/1.jpg', 'img/xy/2.jpg', 'img/xy/3.1.png', 'img/xy/3.2.png', 'img/xy/3.3.png', 'img/xy/3.jpg', 'img/xy/bigfx.png', 'img/xy/btnfh.png', 'img/xy/btnjx.png', 'img/xy/btnsure.png', 'img/xy/btnyq.png', 'img/xy/gz.jpg', 'img/xy/inpxm.png', 'img/xy/inphone.png', 'img/xy/jx.jpg', 'img/xy/phbj.jpg', 'img/xy/sl.png', 'img/xy/sm.png', 'img/xy/util.png', 'img/xy/5.1.png', 'img/xy/5.png'];
+        document.getElementById("l1_2").addEventListener("webkitAnimationEnd", function
+() {
+            $("#xlx,#dlx,#star1,#loading").show();
+            $("#xlx").addClass("xlx");
+            $("#dlx").addClass("dlx");
+            $("#star1").addClass("star1");
+            $("#loading").addClass("loading");
+        }, false);
+
+        var sourceArr = ['img/xy/4.mp3', 'img/xy/bg1.jpg', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/b1.png', 'img/xy/1.jpg', 'img/xy/2.jpg', 'img/xy/3.1.png', 'img/xy/3.2.png', 'img/xy/3.3.png', 'img/xy/3.jpg', 'img/xy/bigfx.png', 'img/xy/btnfh.png', 'img/xy/btnjx.png', 'img/xy/btnsure.png', 'img/xy/btnyq.png', 'img/xy/gz.jpg', 'img/xy/inpxm.png', 'img/xy/inphone.png', 'img/xy/jx.jpg', 'img/xy/phbj.jpg', 'img/xy/sl.png', 'img/xy/sm.png', 'img/xy/util.png', 'img/xy/5.1.png', 'img/xy/5.png'];
         new mo.Loader(sourceArr, {
             onLoading: function (count, total) {
                 //gid('loading_per').innerHTML = Math.floor(count / total * 100) + "%";
                 //alert('加载中...（'+count/total*100+'%）');
             }, onComplete: function (time) {
                 // gid("loading").parentNode.removeChild(gid("loading"));
-                //var myVideo = document.getElementById("ttnb");
-                //LoadAud(myVideo, "img/4.mp3");
-
+                var myVideo = document.getElementById("ttnb");
+                LoadAud(myVideo, "img/xy/4.mp3");
+                return false;
                 $(".s1,.biggz,.imggz,.bigjx,.imgjx,.bg,.addinfo,.s2,.bigfx,.divph,.s3").css({ width: ww, height: hh });
                 setTimeout(function () {
                     $(".load").fadeOut("slow", function () {
                         if ("<%=isx%>" == "1") {
                             switch ("<%=startNum%>") {
                                 case "1":
-                                    $(".s2_12").attr("src", "img/xy/sl.png");
+                                    $(".s2_12").hide();//.attr("src", "img/xy/sl.png");
                                     break;
                                 case "2":
-                                    $(".s2_12,.s2_11").attr("src", "img/xy/sl.png");
+                                    $(".s2_12,.s2_11").hide();//.attr("src", "img/xy/sl.png");
                                     break;
                                 case "3":
-                                    $(".s2_12,.s2_11,.s2_10").attr("src", "img/xy/sl.png");
+                                    $(".s2_12,.s2_11,.s2_10").hide();//.attr("src", "img/xy/sl.png");
                                     break;
                                 case "4":
-                                    $(".s2_12,.s2_11,.s2_10,.s2_9").attr("src", "img/xy/sl.png");
+                                    $(".s2_12,.s2_11,.s2_10,.s2_9").hide();//.attr("src", "img/xy/sl.png");
                                     break;
                                 case "5":
-                                    $(".s2_12,.s2_11,.s2_10,.s2_9,.s2_8").attr("src", "img/xy/sl.png");
+                                    $(".s2_12,.s2_11,.s2_10,.s2_9,.s2_8").hide();//.attr("src", "img/xy/sl.png");
                                     break;
                                 case "6":
-                                    $(".s2_12,.s2_11,.s2_10,.s2_9,.s2_8,.s2_7").attr("src", "img/xy/sl.png");
+                                    $(".s2_12,.s2_11,.s2_10,.s2_9,.s2_8,.s2_7").hide();//.attr("src", "img/xy/sl.png");
                                     break;
                                 case "7":
-                                    $(".s2_12,.s2_11,.s2_10,.s2_9,.s2_8,.s2_7,.s2_6").attr("src", "img/xy/sl.png");
+                                    $(".s2_12,.s2_11,.s2_10,.s2_9,.s2_8,.s2_7,.s2_6").hide();//.attr("src", "img/xy/sl.png");
                                     break;
                             }
                             dataForWeixin.async = true;
@@ -327,7 +377,7 @@
                     //$(".load").fadeTo("slow", 0, function () {
                     //    $(".s1").fadeIn(50);
                     //});
-                }, 10);
+                }, 3000);
                 overscroll(document.querySelector('.itmlist'));
                 $(".btnfh4").tap(function () {
                     $(".divph").fadeOut("slow", function () {
@@ -353,18 +403,25 @@
                     })
                 });
                 $(".sitem").tap(function () {
+                    var ttop = $(".s2_5").offset().top;
+                    var tleft = ww * 0.4;
+                    //this.style.webkitTransform = "translate3d(" + rt + "px,0,0)";
+                    //return false;
                     $(".bg").show();
                     if ($(this).attr("src") == "img/xy/sl.png") {
                         $(".bg").hide();
                     } else {
+                        $(this).attr("src", "img/xy/sl.png");
+                        $(this).css({ "transform": "translate3d(" + tleft + "px," + ttop + "px,0)", "transition": "all ease 3s", "opacity": "0" });
                         changhits($(this));
-
                         $(".bg").hide();
                     }
                 });
                 $(".s1_11,.s2_3").tap(function () {
+
                     $(".bg").show();
                     loadinfolist(0);
+                    $(".itmlist").scrollTop(0);
                     setTimeout(function () {
                         $(".divph").show();
                         $(".bg").hide();
@@ -516,7 +573,7 @@
             $.post("Operation.ashx", { type: "HDXYZJZan", tmpid: $("#hidid").val() }, function (result) {
                 //alert(result);
                 if (result.ist == "4") {
-                    vt.attr("src", "img/xy/sl.png");
+                    //vt.attr("src", "img/xy/sl.png");
                     $(".spnum").text(result.nums);
                     $(".sptop").text(result.ismsgs);
                     return false;

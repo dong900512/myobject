@@ -183,7 +183,7 @@ namespace NewInfoWeb.lnInfo
                     {
                         id = item.Id,
                         img = item.PicUrl,
-                        nickname = item.Name,
+                        nickname = Common.CryptHelper.DESEncrypt.Decrypt(item.Name, WebConfigurationManager.AppSettings["PassWordKey"]),
                         nums = item.Orders
                     });
                 }
