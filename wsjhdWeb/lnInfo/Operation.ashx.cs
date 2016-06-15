@@ -204,7 +204,7 @@ namespace NewInfoWeb.lnInfo
         {
             try
             {
-                var topid1 = Common.CryptHelper.DESEncrypt.Decrypt(Dos.Common.CookieHelper.Get("curXYAes"), WebConfigurationManager.AppSettings["PassWordKey"]);
+                var topid1 = Common.CryptHelper.DESEncrypt.Decrypt(Dos.Common.CookieHelper.Get("curXYAes1"), WebConfigurationManager.AppSettings["PassWordKey"]);
                 int tmphid = 0;
                 int.TryParse(_ct.Request.Form["tmpid"], out tmphid);
                 if (string.IsNullOrEmpty(topid1))
@@ -249,7 +249,7 @@ namespace NewInfoWeb.lnInfo
         {
             try
             {
-                var topid1 = Common.CryptHelper.DESEncrypt.Decrypt(Dos.Common.CookieHelper.Get("curXYAes"), WebConfigurationManager.AppSettings["PassWordKey"]);
+                var topid1 = Common.CryptHelper.DESEncrypt.Decrypt(Dos.Common.CookieHelper.Get("curXYAes1"), WebConfigurationManager.AppSettings["PassWordKey"]);
                 var tname = _ct.Request.Form["tname"];
                 var tphone = _ct.Request.Form["tphone"];
                 var tpicurl = Dos.Common.CookieHelper.Get("curXYImgUrl");

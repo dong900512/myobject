@@ -39,7 +39,7 @@ namespace NewInfoWeb.lnInfo
                 }
                 else
                 {
-                    tmpstr = Dos.Common.CookieHelper.Get("curXYAes");
+                    tmpstr = Dos.Common.CookieHelper.Get("curXYAes1");
                     if (string.IsNullOrEmpty(tmpstr))
                     {
                         //不存在
@@ -56,7 +56,7 @@ namespace NewInfoWeb.lnInfo
                             //ctname = "互动点赞";
                             //ctimgurl = "http://wx.qlogo.cn/mmopen/MvRAYAnmInk1nmbAeTtzO9mnw8QJbarxVeVicMKlOiaZfaF1I43MID2oUia6RicibBvTVfHJZcnWNgPq1FtkBuQ4sbGecA6zukloa/0";
                             tmpstr = Common.CryptHelper.DESEncrypt.Encrypt(wxopid, WebConfigurationManager.AppSettings["PassWordKey"]);
-                            Dos.Common.CookieHelper.Set("curXYAes", tmpstr, 12600);
+                            Dos.Common.CookieHelper.Set("curXYAes1", tmpstr, 12600);
                             //Dos.Common.CookieHelper.Set("curXYTid", wxopid, 12600);
                             Dos.Common.CookieHelper.Set("curXYName", ctname, 12600);
                             Dos.Common.CookieHelper.Set("curXYImgUrl", ctimgurl, 12600);
