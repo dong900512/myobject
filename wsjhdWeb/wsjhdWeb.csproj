@@ -177,7 +177,29 @@
     <Content Include="ChinaTele\img\btnmore.png" />
     <Content Include="ChinaTele\img\d1.jpg" />
     <Content Include="ChinaTele\img\d2.jpg" />
+    <Content Include="ChinaTele\img\xq\1.jpg" />
+    <Content Include="ChinaTele\img\xq\2.jpg" />
+    <Content Include="ChinaTele\img\xq\3.jpg" />
+    <Content Include="ChinaTele\img\xq\4.jpg" />
+    <Content Include="ChinaTele\img\xq\5.jpg" />
+    <Content Include="ChinaTele\img\xq\6.jpg" />
+    <Content Include="ChinaTele\img\xq\7.jpg" />
+    <Content Include="ChinaTele\img\xq\8.jpg" />
+    <Content Include="ChinaTele\img\xq\9.jpg" />
+    <Content Include="ChinaTele\img\xq\btnqd.jpg" />
+    <Content Include="ChinaTele\img\xq\er.png" />
+    <Content Include="ChinaTele\img\xq\s3_1.png" />
+    <Content Include="ChinaTele\img\xq\s3_2.png" />
+    <Content Include="ChinaTele\img\xq\s3_3.png" />
+    <Content Include="ChinaTele\img\xq\s3_4.png" />
+    <Content Include="ChinaTele\img\xq\t1.png" />
+    <Content Include="ChinaTele\img\xq\t2.png" />
+    <Content Include="ChinaTele\img\xq\t3.png" />
+    <Content Include="ChinaTele\img\xq\t4.png" />
+    <Content Include="ChinaTele\img\xq\tips.png" />
     <Content Include="ChinaTele\indenx.html" />
+    <Content Include="ChinaTele\index.aspx" />
+    <Content Include="ChinaTele\main.aspx" />
     <Content Include="cj\cj2.htm" />
     <Content Include="cj\cj3.htm" />
     <Content Include="cj\css\bootstrap.css" />
@@ -524,6 +546,52 @@
     <Content Include="lnInfo\img\fg.png" />
     <Content Include="lnInfo\img\fx.png" />
     <Content Include="lnInfo\img\gz.png" />
+    <Content Include="lnInfo\img\ln\1.1.jpg" />
+    <Content Include="lnInfo\img\ln\1.10.png" />
+    <Content Include="lnInfo\img\ln\1.11.png" />
+    <Content Include="lnInfo\img\ln\1.12.png" />
+    <Content Include="lnInfo\img\ln\1.jpg" />
+    <Content Include="lnInfo\img\ln\2.1.jpg" />
+    <Content Include="lnInfo\img\ln\2.jpg" />
+    <Content Include="lnInfo\img\ln\3.1.jpg" />
+    <Content Include="lnInfo\img\ln\3.jpg" />
+    <Content Include="lnInfo\img\ln\4.1.png" />
+    <Content Include="lnInfo\img\ln\4.2.png" />
+    <Content Include="lnInfo\img\ln\4.3.png" />
+    <Content Include="lnInfo\img\ln\4.4.png" />
+    <Content Include="lnInfo\img\ln\4.jpg" />
+    <Content Include="lnInfo\img\ln\5.jpg" />
+    <Content Include="lnInfo\img\ln\6.jpg" />
+    <Content Include="lnInfo\img\ln\7.jpg" />
+    <Content Include="lnInfo\img\ln\8.jpg" />
+    <Content Include="lnInfo\img\ln\btnbm.png" />
+    <Content Include="lnInfo\img\ln\btncy.png" />
+    <Content Include="lnInfo\img\ln\btnfh.png" />
+    <Content Include="lnInfo\img\ln\btnjx.png" />
+    <Content Include="lnInfo\img\ln\btnsure.png" />
+    <Content Include="lnInfo\img\ln\btnyq.png" />
+    <Content Include="lnInfo\img\ln\er.png" />
+    <Content Include="lnInfo\img\ln\fxs.jpg" />
+    <Content Include="lnInfo\img\ln\gz.jpg" />
+    <Content Include="lnInfo\img\ln\inpxm.png" />
+    <Content Include="lnInfo\img\ln\intphone.png" />
+    <Content Include="lnInfo\img\ln\jx.jpg" />
+    <Content Include="lnInfo\img\ln\phbj.jpg" />
+    <Content Include="lnInfo\img\ln\s1.png" />
+    <Content Include="lnInfo\img\ln\s1_1.png" />
+    <Content Include="lnInfo\img\ln\s2.png" />
+    <Content Include="lnInfo\img\ln\s2_1.png" />
+    <Content Include="lnInfo\img\ln\s3.png" />
+    <Content Include="lnInfo\img\ln\s3_1.png" />
+    <Content Include="lnInfo\img\ln\s4.png" />
+    <Content Include="lnInfo\img\ln\s4_1.png" />
+    <Content Include="lnInfo\img\ln\s5.png" />
+    <Content Include="lnInfo\img\ln\s5_1.png" />
+    <Content Include="lnInfo\img\ln\s6.png" />
+    <Content Include="lnInfo\img\ln\s6_1.png" />
+    <Content Include="lnInfo\img\ln\s7.png" />
+    <Content Include="lnInfo\img\ln\s7_1.png" />
+    <Content Include="lnInfo\img\ln\tips.png" />
     <Content Include="lnInfo\img\mx.png" />
     <Content Include="lnInfo\img\ph.png" />
     <Content Include="lnInfo\img\tips.jpg" />
@@ -590,6 +658,8 @@
     <Content Include="lnInfo\img\xy\sm.png" />
     <Content Include="lnInfo\img\xy\util.png" />
     <Content Include="lnInfo\js\thelper.js" />
+    <Content Include="lnInfo\lndzinfo.aspx" />
+    <Content Include="lnInfo\lnychindex.aspx" />
     <Content Include="lnInfo\lnzl.aspx" />
     <Content Include="lnInfo\t1.html" />
     <Content Include="lnInfo\xydzinfo.aspx" />
@@ -1080,12 +1150,14 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Appcode\BannerInfo.cs" />
     <Compile Include="Appcode\Config.cs" />
     <Compile Include="Appcode\Data.cs" />
     <Compile Include="Appcode\DeleteValidate.cs" />
     <Compile Include="Appcode\DESCrypt.cs" />
     <Compile Include="Appcode\Encrypt.cs" />
     <Compile Include="Appcode\Exception.cs" />
+    <Compile Include="Appcode\Forms.cs" />
     <Compile Include="Appcode\globalVariable.cs" />
     <Compile Include="Appcode\HdPic.cs" />
     <Compile Include="Appcode\HdPicHit.cs" />
@@ -1118,6 +1190,23 @@
     </Compile>
     <Compile Include="ashx\yhqdh.ashx.cs">
       <DependentUpon>yhqdh.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ChinaTele\helper.ashx.cs">
+      <DependentUpon>helper.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ChinaTele\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChinaTele\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChinaTele\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChinaTele\main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
     </Compile>
     <Compile Include="cj\handlers\helper.ashx.cs">
       <DependentUpon>helper.ashx</DependentUpon>
@@ -1167,6 +1256,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="lnInfo\lndzinfo.aspx.cs">
+      <DependentUpon>lndzinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lnInfo\lndzinfo.aspx.designer.cs">
+      <DependentUpon>lndzinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lnInfo\lnychindex.aspx.cs">
+      <DependentUpon>lnychindex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lnInfo\lnychindex.aspx.designer.cs">
+      <DependentUpon>lnychindex.aspx</DependentUpon>
     </Compile>
     <Compile Include="lnInfo\lnzl.aspx.cs">
       <DependentUpon>lnzl.aspx</DependentUpon>
@@ -1397,6 +1500,8 @@
     <Content Include="cj\handlers\helper.ashx" />
     <Content Include="cj\handlers\TwoInfo.ashx" />
     <Content Include="cj\handlers\ThreeInfo.ashx" />
+    <Content Include="ChinaTele\img\xq\1.pdf" />
+    <Content Include="ChinaTele\helper.ashx" />
     <None Include="js\lib\jquery-1.10.2.min.map" />
     <Content Include="yqh\helper.ashx" />
     <Content Include="Tepay\payhelperinfo.ashx" />
