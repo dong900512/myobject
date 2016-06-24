@@ -389,7 +389,12 @@
                 });
                 touch.on(tg3, 'swipeup', function (ev) {
                     $(".s6").fadeOut("30", function () {
-                        showslid();
+                        if ("<%=isx%>" == "1") {
+                            $(".s4").fadeOut("10");
+                            $(".s2").fadeIn("slow");
+                        } else {
+                            showslid();
+                        }
                     });
                 });
                 //$(".s4").fadeOut("10");
@@ -404,8 +409,7 @@
                             }
                         }
                         $(".arraw").hide();
-                        $(".s4").fadeOut("10");
-                        $(".s2").fadeIn("slow");
+
                         dataForWeixin.async = true;
                         dataForWeixin.title = "我正在参加鲁能泰山7号'我敢'刘若英演唱会，免费赢门票活动！"
                         dataForWeixin.desc = "你能帮我实现愿望吗？赶快来帮忙吧！";

@@ -768,6 +768,41 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="weixin.aspx" />
+    <Content Include="yhjc\1.html" />
+    <Content Include="yhjc\css\animate.min.css" />
+    <Content Include="yhjc\img\1.jpg" />
+    <Content Include="yhjc\img\2.jpg" />
+    <Content Include="yhjc\img\3.jpg" />
+    <Content Include="yhjc\img\4.jpg" />
+    <Content Include="yhjc\img\5.jpg" />
+    <Content Include="yhjc\img\btnks.png" />
+    <Content Include="yhjc\img\cleft.png" />
+    <Content Include="yhjc\img\cright.png" />
+    <Content Include="yhjc\img\ctip.png" />
+    <Content Include="yhjc\img\er.png" />
+    <Content Include="yhjc\css\index.css" />
+    <Content Include="yhjc\img\f.png" />
+    <Content Include="yhjc\img\gz.png" />
+    <Content Include="yhjc\img\hdxq.png" />
+    <Content Include="yhjc\img\jx.jpg" />
+    <Content Include="yhjc\img\o1.png" />
+    <Content Include="yhjc\img\o2.png" />
+    <Content Include="yhjc\img\o3.png" />
+    <Content Include="yhjc\img\o4.png" />
+    <Content Include="yhjc\img\o5.png" />
+    <Content Include="yhjc\img\o6.png" />
+    <Content Include="yhjc\img\o7.png" />
+    <Content Include="yhjc\img\o8.png" />
+    <Content Include="yhjc\img\p.png" />
+    <Content Include="yhjc\img\s.png" />
+    <Content Include="yhjc\img\tip1.png" />
+    <Content Include="yhjc\img\tip2.png" />
+    <Content Include="yhjc\img\tj.png" />
+    <Content Include="yhjc\img\xq.png" />
+    <Content Include="yhjc\index.aspx" />
+    <Content Include="yhjc\js\thelper.js" />
+    <Content Include="yhjc\upsj.htm" />
+    <Content Include="yhjc\yhdzinfo.aspx" />
     <Content Include="yqh\BRInfo.aspx" />
     <Content Include="yqh\cert1\证书使用说明.txt" />
     <Content Include="yqh\cert\证书使用说明.txt" />
@@ -1150,6 +1185,7 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Appcode\Activity.cs" />
     <Compile Include="Appcode\BannerInfo.cs" />
     <Compile Include="Appcode\Config.cs" />
     <Compile Include="Appcode\Data.cs" />
@@ -1333,6 +1369,23 @@
     <Compile Include="weixin.aspx.designer.cs">
       <DependentUpon>weixin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="yhjc\helper.ashx.cs">
+      <DependentUpon>helper.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="yhjc\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yhjc\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yhjc\yhdzinfo.aspx.cs">
+      <DependentUpon>yhdzinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yhjc\yhdzinfo.aspx.designer.cs">
+      <DependentUpon>yhdzinfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yqh\BRInfo.aspx.cs">
       <DependentUpon>BRInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1508,6 +1561,7 @@
     <Content Include="lnInfo\Operation.ashx" />
     <Content Include="lnInfo\css\tt0037m_.ttf" />
     <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
+    <Content Include="yhjc\helper.ashx" />
     <None Include="yqh\cert1\apiclient_cert.p12" />
     <None Include="yqh\cert1\apiclient_cert.pem" />
     <None Include="yqh\cert1\apiclient_key.pem" />

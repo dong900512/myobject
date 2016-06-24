@@ -7,9 +7,9 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace NewInfoWeb.ChinaTele {
+namespace NewInfoWeb.yhjc {
     
     
-    public partial class main {
+    public partial class yhdzinfo {
     }
 }

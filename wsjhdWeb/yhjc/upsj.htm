@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .btnupdate { width: 150px; border-radius: 10px; padding: 10px; border: 0px; margin-top: 20px; cursor: pointer; }
+        .sp1_1 { transform: scale(1.2); background-color: red; }
+        .item { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <div class="infolist">
+        </div>
+        <button class="btnupdate">
+            更新球赛
+        </button>
+        <div class="stinfo" style="display:none;">
+            <div class="item">
+                <div>{2}</div>
+                <div style="margin-top:40px;">
+                    <img src="img/s.png" class="sp1 bt1 ct_{0}" attdaid="{0}" attdata="{1}" attinfo="胜" />
+                    <img src="img/p.png" class="sp1 bt2 ct_{0}" attdaid="{0}" attdata="{1}" attinfo="平" />
+                    <img src="img/f.png" class="sp1 bt3 ct_{0}" attdaid="{0}" attdata="{1}" attinfo="败" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+    <script type="text/javascript" src="/Scripts/common.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".btnupdate").on("click", function () {
+
+                var itl = $(".infolist .item").length;
+                var tsend = $(".sp1_1").length;
+                if (itl == 0) {
+                    alert("暂无数据", "alert");
+                    return false;
+                } else {
+                    if (tsend < itl) {
+                        alert("请选择所有比赛后更新", "alert");
+                        return false;
+                    } else {
+                        var tlist = "";
+                        for (var i = 0; i < tsend; i++) {
+                            tlist += $(".sp1_1").eq(i).attr("attdata") + "," + $(".sp1_1").eq(i).attr("attdaid") + "," + $(".sp1_1").eq(i).attr("attinfo") + "|";
+                        }
+                        $.ajax({
+                            type: 'post',
+                            url: 'helper.ashx',
+                            dataType: 'json',
+                            data: { type: "UpdateInfo", tinfo: tlist },
+                            success: function (data) {
+                                //alert(data.code)
+                                $(".bg").hide();
+                                if (data.count == 1) {
+                                    window.location.href = "upsj.htm";
+                                } else {
+                                    //竞猜失败
+                                    alert("竞猜失败", "alert");
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+            $.post("helper.ashx", { type: "getXMlist" }, function (result) {
+                var listd = "";
+                if (parseInt(result.count) < 1) {
+                } else {
+                    $.each(result.result, function (i, n) {
+                        listd += String.format($(".stinfo").html(), n.id, n.sjd + "--" + n.gj
+                            , n.sjd + "--" + n.gj);// "<li><img src=\"" + n.img + "\" /></li>";
+                    });
+                    //alert(listd);
+                    $(".infolist").append(listd);
+                    $(".sp1").on("click", function () {
+                        //alert("123");
+                        if ($(this).hasClass("sp1_1")) {
+
+                        } else {
+                            $(this).siblings(".sp1").removeClass("sp1_1");
+                            $(this).addClass("sp1_1");
+                        }
+                    });
+                }
+            }, "json");
+        })
+    </script>
+</body>
+</html>

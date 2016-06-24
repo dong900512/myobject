@@ -51,7 +51,7 @@
         .s2 { text-align: center; }
         .tinfo { position: absolute; text-align: center; width: 85%; left: 7.5%; top: 32%; color: white; }
 
-        .btnfh2 { border: none; background-color: #e95513; width: 40%; color: white; height: 45px; border-radius: 8px; font-size: 2.2rem; margin-top: 3%; margin-bottom: 9%; }
+        .btnfh2 { border: none; background-color: #e95513; width: 40%; color: white; height: 45px; border-radius: 8px; font-size: 2.2rem; margin-top: 3%; margin- bottom: 9%; }
         .tinfo a { display: inline-block; }
         .tcont { position: absolute; width: 94%; color: white; top: 25%; left: 3%; }
             .tcont button { min-width: 30%; background-color: white; border-radius: 4px; border: none; margin-bottom: 5%; }
@@ -77,6 +77,8 @@
         .btnfh5 { border: none; background-color: #e95513 !important; width: 40%; color: white; height: 45px; border-radius: 8px; font-size: 2.2rem; margin-top: 3%; margin-bottom: 9%; }
         textarea { border-radius: 5px; border: 1px solid #CCC6C6; resize: none; padding-left: 5px; line-height: 22px; }
         #txtcontent { width: 100%; }
+        .xqms { width: 100%; height: 100%; position: fixed; display: none; z-index: 500; top: 0; left: 0; }
+        .bg { width: 100%; height: 100%; position: fixed; display: none; z-index: 500; top: 0; left: 0; }
     </style>
 </head>
 <body>
@@ -99,13 +101,13 @@
             <img src="img/xq/6.jpg" />
             <div class="tinfo">
                 <%-- onclick="javascript:shTips();" download="img/xq/4.pdf"--%>
-                <a href="img/xq/1.pdf" target="_self">
+                <a href="img/xq/CTG Brief.pdf" target="_self">
                     <img src="img/xq/s3_1.png" /></a>
-                <a href="img/xq/2.pdf" target="_self">
+                <a href="img/xq/CTG Brief.pdf" target="_self">
                     <img src="img/xq/s3_2.png" /></a>
-                <a href="img/xq/3.pdf" target="_self">
+                <a href="img/xq/CTG Brief.pdf" target="_self">
                     <img src="img/xq/s3_3.png" /></a>
-                <a href="img/xq/4.pdf" target="_self" style="width: 107%;">
+                <a href="img/xq/CTG Brief.pdf" target="_self" style="width: 107%;">
                     <img src="img/xq/s3_4.png" /></a>
                 <button class="btnfh2">返回</button>
             </div>
@@ -172,8 +174,11 @@
                 <button class="btnfh5">返回</button>
             </div>
         </div>
+
     </div>
+    <div class="bg"></div>
     <input type="hidden" id="hidTJ" value="<%=tmpdcwj %>" />
+    <img src="img/xq/10.png" class="xqms" />
 </body>
 
 <script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
@@ -186,73 +191,45 @@
     dataForWeixin.desc = "中国电信国际业务推介会";
     dataForWeixin.title = "中国电信国际业务推介会";
     dataForWeixin.isWXShare = false;
-    //document.body.addEventListener('touchmove', function (evt) {
-    //    //In this case, the default behavior is scrolling the body, which
-    //    //would result in an overflow.  Since we don't want that, we preventDefault.
-    //    if (!evt._isScroller) {
-    //        evt.preventDefault()
-    //    }
-    //});
-    var overscroll = function (el) {
-        el.addEventListener('touchstart', function () {
-            var top = el.scrollTop
-              , totalScroll = el.scrollHeight
-              , currentScroll = top + el.offsetHeight
-            //If we're at the top or the bottom of the containers
-            //scroll, push up or down one pixel.
-            //
-            //this prevents the scroll from "passing through" to
-            //the body.
-            if (top === 0) {
-                el.scrollTop = 1
-            } else if (currentScroll === totalScroll) {
-                el.scrollTop = top - 1
-            }
-        })
-        el.addEventListener('touchmove', function (evt) {
-            //if the content is actually scrollable, i.e. the content is long enough
-            //that scrolling can occur
-            if (el.offsetHeight < el.scrollHeight)
-                evt._isScroller = true
-        })
-    }
+
     $(function () {
-       <%-- alert("<%=tmpstr%>");--%>
-        //overscroll(document.querySelector('.s2'));
-        //overscroll(document.querySelector('.s3'));
-        //overscroll(document.querySelector('.s3'));
-        //overscroll(document.querySelector('.s2'));
 
-
-        //$(".s1").fadeOut();
-        //$(".s3").fadeIn();
         $(".s1_1").on("touchstart", function () {
+            $(".bg").show();
             gotoTop();
             $(".s1").fadeOut("slow", function () {
                 $(".s2").fadeIn();
+                $(".bg").hide();
             });
         });
         $(".s1_2").on("touchstart", function () {
             gotoTop();
+            $(".bg").show();
             $(".s1").fadeOut("slow", function () {
+                $(".bg").hide();
                 $(".s3").fadeIn();
             });
         });
         $(".s1_3").on("touchstart", function () {
+            $(".bg").show();
             gotoTop();
             if ($("#hidTJ").val() == "1") {
                 $(".s1").fadeOut("slow", function () {
+                    $(".bg").hide();
                     $(".s5").fadeIn();
                 });
             } else {
                 $(".s1").fadeOut("slow", function () {
+                    $(".bg").hide();
                     $(".s4").fadeIn();
                 });
             }
         });
         $(".s1_4").on("touchstart", function () {
+            $(".bg").show();
             gotoTop();
             $(".s1").fadeOut("slow", function () {
+                $(".bg").hide();
                 $(".s6").fadeIn();
             });
         });
@@ -295,6 +272,15 @@
                 $(".s1").fadeIn("10");
             });
         });
+        $(".xqms").tap(function () {
+            gotoTop();
+            $(".xqms").hide();
+            $("#txtcontent").val("");
+            $(".s6").fadeOut("slow", function () {
+
+                $(".s1").fadeIn("10");
+            });
+        });
         $(".btntj5").tap(function () {
             var tcont = $.trim($("#txtcontent").val());
             if (tcont == "" || tcont == null) {
@@ -314,6 +300,7 @@
                 success: function (data) {
                     overlay1.close();
                     if (data.ist == "1") {
+                        $(".xqms").show();
                         $("#txtcontent").val("");
                         gotoTop();
                         //$(".s4").fadeOut("slow", function () {
