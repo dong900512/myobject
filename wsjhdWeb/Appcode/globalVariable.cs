@@ -140,7 +140,7 @@ public class globalVariables
     /// </summary>
     public static string NewsImgServer {
 
-        get { return fileServer + PdmConfiguration.Settings("NewsImg") + "\\"; }
+        get { return fileServer + PdmConfiguration.Settings("NewsImg") + "/"; }
 
     }
 

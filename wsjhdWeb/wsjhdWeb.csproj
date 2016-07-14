@@ -44,8 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AspNetPager">
-      <HintPath>..\..\..\sdlm\SdlmInfoWebSite\Bin\AspNetPager.dll</HintPath>
+    <Reference Include="AspNetPager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\work\szbdinfo\szbdinfo\bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNetPager.resources">
+      <HintPath>..\..\..\work\szbdinfo\packages\AspNetPager_CN.7.5.1\lib\zh-CHT\AspNetPager.resources.dll</HintPath>
     </Reference>
     <Reference Include="DateChooserLibrary">
       <HintPath>..\..\..\sdlm\SdlmInfoWebSite\Bin\DateChooserLibrary.dll</HintPath>
@@ -91,6 +95,10 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\work\szbdinfo\packages\NLog.4.2.0\lib\net40\NLog.dll</HintPath>
     </Reference>
     <Reference Include="NPOI">
       <HintPath>..\..\..\bywinfo\bywWebSite\Bin\NPOI.dll</HintPath>
@@ -149,17 +157,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="bin\AspNetPager.dll" />
     <Content Include="bin\ClubCardEF.dll" />
-    <Content Include="bin\ClubCardEF.pdb" />
     <Content Include="bin\CommonServer.dll" />
-    <Content Include="bin\CommonServer.pdb" />
     <Content Include="bin\DateChooserLibrary.dll" />
     <Content Include="bin\DotNetTextBox.dll" />
     <Content Include="bin\LitJSON.dll" />
     <Content Include="bin\MvcPager.dll" />
     <Content Include="bin\NewInfoWeb.dll" />
     <Content Include="bin\NewInfoWeb.pdb" />
+    <Content Include="bin\NLog.dll" />
     <Content Include="bin\NPOI.dll" />
     <Content Include="bin\NPOI.OOXML.dll" />
     <Content Include="bin\NPOI.OpenXml4Net.dll" />
@@ -172,7 +178,6 @@
     <Content Include="bin\URLRewriter.dll" />
     <Content Include="bin\Util.dll" />
     <Content Include="bin\WXEF.dll" />
-    <Content Include="bin\WXEF.pdb" />
     <Content Include="ChinaTele\img\btnfh.png" />
     <Content Include="ChinaTele\img\btnmore.png" />
     <Content Include="ChinaTele\img\d1.jpg" />
@@ -659,11 +664,641 @@
     <Content Include="lnInfo\img\xy\util.png" />
     <Content Include="lnInfo\js\thelper.js" />
     <Content Include="lnInfo\lndzinfo.aspx" />
+    <Content Include="lnInfo\lnlotter.aspx" />
     <Content Include="lnInfo\lnychindex.aspx" />
     <Content Include="lnInfo\lnzl.aspx" />
+    <Content Include="lnInfo\lot\5555.png" />
+    <Content Include="lnInfo\lot\bg.jpg" />
+    <Content Include="lnInfo\lot\btnlq.png" />
+    <Content Include="lnInfo\lot\fxs.jpg" />
+    <Content Include="lnInfo\lot\tc.png" />
+    <Content Include="lnInfo\lot\tc1.png" />
+    <Content Include="lnInfo\lot\z.png" />
+    <Content Include="lnInfo\lot\tip.png" />
     <Content Include="lnInfo\t1.html" />
     <Content Include="lnInfo\xydzinfo.aspx" />
     <Content Include="lnInfo\xyindex.aspx" />
+    <Content Include="manage\admin_login.aspx" />
+    <Content Include="manage\controls\bottom.ascx" />
+    <Content Include="manage\controls\carheader.ascx" />
+    <Content Include="manage\controls\formheader.ascx" />
+    <Content Include="manage\controls\indexheader.ascx" />
+    <Content Include="manage\controls\Info\head.ascx" />
+    <Content Include="manage\controls\newsheader.ascx" />
+    <Content Include="manage\controls\serveheader.ascx" />
+    <Content Include="manage\controls\syshead.ascx" />
+    <Content Include="manage\css\ace.min.css" />
+    <Content Include="manage\css\admin_joekoe.css" />
+    <Content Include="manage\css\bootstrap.min.css" />
+    <Content Include="manage\css\bubble.css" />
+    <Content Include="manage\css\default.css" />
+    <Content Include="manage\css\imgshow.css" />
+    <Content Include="manage\css\input.css" />
+    <Content Include="manage\css\login.css" />
+    <Content Include="manage\css\nav.css" />
+    <Content Include="manage\css\page.css" />
+    <Content Include="manage\css\public.css" />
+    <Content Include="manage\css\style.css" />
+    <Content Include="manage\css\StyleSheet.css" />
+    <Content Include="manage\css\Tooltip.css" />
+    <Content Include="manage\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="manage\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="manage\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="manage\css\zTreeStyle\img\loading.gif" />
+    <Content Include="manage\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="manage\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="manage\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="manage\css\zui.min.css" />
+    <Content Include="manage\Default.aspx" />
+    <Content Include="manage\dist\css\zui-theme.css" />
+    <Content Include="manage\dist\css\zui-theme.min.css" />
+    <Content Include="manage\dist\css\zui.css" />
+    <Content Include="manage\dist\css\zui.lite.css" />
+    <Content Include="manage\dist\css\zui.lite.min.css" />
+    <Content Include="manage\dist\css\zui.min.css" />
+    <Content Include="manage\dist\fonts\zenicon.svg" />
+    <Content Include="manage\dist\js\zui.js" />
+    <Content Include="manage\dist\js\zui.lite.js" />
+    <Content Include="manage\dist\js\zui.lite.min.js" />
+    <Content Include="manage\dist\js\zui.min.js" />
+    <Content Include="manage\dist\lib\board\zui.board.css" />
+    <Content Include="manage\dist\lib\board\zui.board.js" />
+    <Content Include="manage\dist\lib\board\zui.board.min.css" />
+    <Content Include="manage\dist\lib\board\zui.board.min.js" />
+    <Content Include="manage\dist\lib\calendar\zui.calendar.css" />
+    <Content Include="manage\dist\lib\calendar\zui.calendar.js" />
+    <Content Include="manage\dist\lib\calendar\zui.calendar.min.css" />
+    <Content Include="manage\dist\lib\calendar\zui.calendar.min.js" />
+    <Content Include="manage\dist\lib\chart\chart.js" />
+    <Content Include="manage\dist\lib\chart\chart.min.js" />
+    <Content Include="manage\dist\lib\chosen\chosen.css" />
+    <Content Include="manage\dist\lib\chosen\chosen.icons.css" />
+    <Content Include="manage\dist\lib\chosen\chosen.icons.js" />
+    <Content Include="manage\dist\lib\chosen\chosen.icons.min.css" />
+    <Content Include="manage\dist\lib\chosen\chosen.icons.min.js" />
+    <Content Include="manage\dist\lib\chosen\chosen.js" />
+    <Content Include="manage\dist\lib\chosen\chosen.min.css" />
+    <Content Include="manage\dist\lib\chosen\chosen.min.js" />
+    <Content Include="manage\dist\lib\datatable\zui.datatable.css" />
+    <Content Include="manage\dist\lib\datatable\zui.datatable.js" />
+    <Content Include="manage\dist\lib\datatable\zui.datatable.min.css" />
+    <Content Include="manage\dist\lib\datatable\zui.datatable.min.js" />
+    <Content Include="manage\dist\lib\datetimepicker\datetimepicker.css" />
+    <Content Include="manage\dist\lib\datetimepicker\datetimepicker.js" />
+    <Content Include="manage\dist\lib\datetimepicker\datetimepicker.min.css" />
+    <Content Include="manage\dist\lib\datetimepicker\datetimepicker.min.js" />
+    <Content Include="manage\dist\lib\droppable\droppable.js" />
+    <Content Include="manage\dist\lib\droppable\droppable.min.js" />
+    <Content Include="manage\dist\lib\hotkey\hotkey.js" />
+    <Content Include="manage\dist\lib\hotkey\hotkey.min.js" />
+    <Content Include="manage\dist\lib\ieonly\excanvas.js" />
+    <Content Include="manage\dist\lib\ieonly\html5shiv.js" />
+    <Content Include="manage\dist\lib\ieonly\respond.js" />
+    <Content Include="manage\dist\lib\imgcutter\zui.imgcutter.css" />
+    <Content Include="manage\dist\lib\imgcutter\zui.imgcutter.js" />
+    <Content Include="manage\dist\lib\imgcutter\zui.imgcutter.min.css" />
+    <Content Include="manage\dist\lib\imgcutter\zui.imgcutter.min.js" />
+    <Content Include="manage\dist\lib\jquery\jquery.js" />
+    <Content Include="manage\dist\lib\kindeditor\kindeditor.css" />
+    <Content Include="manage\dist\lib\kindeditor\kindeditor.js" />
+    <Content Include="manage\dist\lib\kindeditor\kindeditor.min.css" />
+    <Content Include="manage\dist\lib\kindeditor\kindeditor.min.js" />
+    <Content Include="manage\dist\lib\kindeditor\lang\en.js" />
+    <Content Include="manage\dist\lib\kindeditor\lang\zh_CN.js" />
+    <Content Include="manage\dist\lib\kindeditor\lang\zh_TW.js" />
+    <Content Include="manage\dist\lib\kindeditor\themes\default\default.css" />
+    <Content Include="manage\dist\lib\kindeditor\themes\default\default.png" />
+    <Content Include="manage\dist\lib\kindeditor\themes\default\gray.png" />
+    <Content Include="manage\dist\lib\migrate\migrate1.2.js" />
+    <Content Include="manage\dist\lib\migrate\migrate1.2.min.js" />
+    <Content Include="manage\dist\lib\prettify\lang-apollo.js" />
+    <Content Include="manage\dist\lib\prettify\lang-basic.js" />
+    <Content Include="manage\dist\lib\prettify\lang-clj.js" />
+    <Content Include="manage\dist\lib\prettify\lang-css.js" />
+    <Content Include="manage\dist\lib\prettify\lang-dart.js" />
+    <Content Include="manage\dist\lib\prettify\lang-erlang.js" />
+    <Content Include="manage\dist\lib\prettify\lang-go.js" />
+    <Content Include="manage\dist\lib\prettify\lang-hs.js" />
+    <Content Include="manage\dist\lib\prettify\lang-lisp.js" />
+    <Content Include="manage\dist\lib\prettify\lang-llvm.js" />
+    <Content Include="manage\dist\lib\prettify\lang-lua.js" />
+    <Content Include="manage\dist\lib\prettify\lang-matlab.js" />
+    <Content Include="manage\dist\lib\prettify\lang-ml.js" />
+    <Content Include="manage\dist\lib\prettify\lang-mumps.js" />
+    <Content Include="manage\dist\lib\prettify\lang-n.js" />
+    <Content Include="manage\dist\lib\prettify\lang-pascal.js" />
+    <Content Include="manage\dist\lib\prettify\lang-proto.js" />
+    <Content Include="manage\dist\lib\prettify\lang-r.js" />
+    <Content Include="manage\dist\lib\prettify\lang-rd.js" />
+    <Content Include="manage\dist\lib\prettify\lang-scala.js" />
+    <Content Include="manage\dist\lib\prettify\lang-sql.js" />
+    <Content Include="manage\dist\lib\prettify\lang-tcl.js" />
+    <Content Include="manage\dist\lib\prettify\lang-tex.js" />
+    <Content Include="manage\dist\lib\prettify\lang-vb.js" />
+    <Content Include="manage\dist\lib\prettify\lang-vhdl.js" />
+    <Content Include="manage\dist\lib\prettify\lang-wiki.js" />
+    <Content Include="manage\dist\lib\prettify\lang-xq.js" />
+    <Content Include="manage\dist\lib\prettify\lang-yaml.js" />
+    <Content Include="manage\dist\lib\prettify\prettify.css" />
+    <Content Include="manage\dist\lib\prettify\prettify.js" />
+    <Content Include="manage\dist\lib\prettify\run_prettify.js" />
+    <Content Include="manage\err.aspx" />
+    <Content Include="manage\frame.aspx" />
+    <Content Include="manage\images\1231232132131312312.png" />
+    <Content Include="manage\images\affirmimg.png" />
+    <Content Include="manage\images\arrear.png" />
+    <Content Include="manage\images\avatar2.png" />
+    <Content Include="manage\images\bottomimg.png" />
+    <Content Include="manage\images\btnblue.png" />
+    <Content Include="manage\images\btnblue1.png" />
+    <Content Include="manage\images\btngrey.png" />
+    <Content Include="manage\images\cenenimg.png" />
+    <Content Include="manage\images\exitimg.png" />
+    <Content Include="manage\images\get_back.png" />
+    <Content Include="manage\images\img00.png" />
+    <Content Include="manage\images\img01.png" />
+    <Content Include="manage\images\img02.png" />
+    <Content Include="manage\images\img03.png" />
+    <Content Include="manage\images\img04.png" />
+    <Content Include="manage\images\Imgjia.jpg" />
+    <Content Include="manage\images\Imgjia.png" />
+    <Content Include="manage\images\inputimg.png" />
+    <Content Include="manage\images\line1.png" />
+    <Content Include="manage\images\line2.png" />
+    <Content Include="manage\images\log.png" />
+    <Content Include="manage\images\main\HeardBg.png" />
+    <Content Include="manage\images\nameimg.png" />
+    <Content Include="manage\images\no_arrear.png" />
+    <Content Include="manage\images\no_img00.png" />
+    <Content Include="manage\images\no_img01.png" />
+    <Content Include="manage\images\no_img02.png" />
+    <Content Include="manage\images\no_img03.png" />
+    <Content Include="manage\images\no_img04.png" />
+    <Content Include="manage\images\passwordimg.png" />
+    <Content Include="manage\images\public.htm" />
+    <Content Include="manage\images\qq_house.png" />
+    <Content Include="manage\images\refreshimg.png" />
+    <Content Include="manage\images\searchimg.png" />
+    <Content Include="manage\images\siteserver.png" />
+    <Content Include="manage\images\sprite.jpg" />
+    <Content Include="manage\images\Subminchaxun.png" />
+    <Content Include="manage\images\topimg.png" />
+    <Content Include="manage\images\topimg1.png" />
+    <Content Include="manage\images\txfc_logo.png" />
+    <Content Include="manage\images\txfc_logo1.png" />
+    <Content Include="manage\images\userimg.png" />
+    <Content Include="manage\images\validateCode.htm" />
+    <Content Include="manage\images\verifybg.png" />
+    <Content Include="manage\images\welcomeimg.png" />
+    <Content Include="manage\images\yunBg.jpg" />
+    <Content Include="manage\images\yunsubmit.jpg" />
+    <Content Include="manage\images\yun_ico1.jpg" />
+    <Content Include="manage\img.aspx" />
+    <Content Include="manage\img\70x70_books.gif" />
+    <Content Include="manage\img\70x70_download.gif" />
+    <Content Include="manage\img\addpic.png" />
+    <Content Include="manage\img\agileProcesses.gif" />
+    <Content Include="manage\img\al_body_bg.gif" />
+    <Content Include="manage\img\al_body_right.gif" />
+    <Content Include="manage\img\al_end_bg.gif" />
+    <Content Include="manage\img\al_end_end.gif" />
+    <Content Include="manage\img\al_end_left.gif" />
+    <Content Include="manage\img\al_end_right.gif" />
+    <Content Include="manage\img\al_password.gif" />
+    <Content Include="manage\img\al_top.gif" />
+    <Content Include="manage\img\al_username.gif" />
+    <Content Include="manage\img\arrow.gif" />
+    <Content Include="manage\img\beginsearch.gif" />
+    <Content Include="manage\img\bn.gif" />
+    <Content Include="manage\img\bn02.gif" />
+    <Content Include="manage\img\b_ok.jpg" />
+    <Content Include="manage\img\b_reset.jpeg" />
+    <Content Include="manage\img\b_reset.jpg" />
+    <Content Include="manage\img\checkver.gif" />
+    <Content Include="manage\img\down_1.gif" />
+    <Content Include="manage\img\down_2.gif" />
+    <Content Include="manage\img\forbid.gif" />
+    <Content Include="manage\img\genericwebcast.jpg" />
+    <Content Include="manage\img\hint.jpg" />
+    <Content Include="manage\img\icon\detail-search.gif" />
+    <Content Include="manage\img\icon\detail-search.png" />
+    <Content Include="manage\img\icon\expire-search.gif" />
+    <Content Include="manage\img\icon\expire-search.png" />
+    <Content Include="manage\img\icon\group.gif" />
+    <Content Include="manage\img\icon\group.png" />
+    <Content Include="manage\img\icon\member-search.gif" />
+    <Content Include="manage\img\icon\member-search.png" />
+    <Content Include="manage\img\icon\member.gif" />
+    <Content Include="manage\img\icon\member.png" />
+    <Content Include="manage\img\icon\normal-search.gif" />
+    <Content Include="manage\img\icon\normal-search.png" />
+    <Content Include="manage\img\icon\paymode.gif" />
+    <Content Include="manage\img\icon\paymode.png" />
+    <Content Include="manage\img\icon\schedule.gif" />
+    <Content Include="manage\img\icon\theme-search.gif" />
+    <Content Include="manage\img\icon\theme-search.png" />
+    <Content Include="manage\img\img.gif" />
+    <Content Include="manage\img\Interoperability2.jpg" />
+    <Content Include="manage\img\loading.gif" />
+    <Content Include="manage\img\menu_bg.gif" />
+    <Content Include="manage\img\menu_endbg.gif" />
+    <Content Include="manage\img\menu_endleft.gif" />
+    <Content Include="manage\img\menu_endright.gif" />
+    <Content Include="manage\img\menu_topbg.gif" />
+    <Content Include="manage\img\menu_topleft.gif" />
+    <Content Include="manage\img\menu_topright.gif" />
+    <Content Include="manage\img\mobility.jpg" />
+    <Content Include="manage\img\NetcfGames80x60.jpg" />
+    <Content Include="manage\img\petshop.jpg" />
+    <Content Include="manage\img\resize_minus.gif" />
+    <Content Include="manage\img\resize_plus.gif" />
+    <Content Include="manage\img\schedule.gif" />
+    <Content Include="manage\img\schedule.png" />
+    <Content Include="manage\img\search.gif" />
+    <Content Include="manage\img\s_arrow.gif" />
+    <Content Include="manage\img\s_arrow_top.gif" />
+    <Content Include="manage\img\s_left.gif" />
+    <Content Include="manage\img\s_left_sort.gif" />
+    <Content Include="manage\img\s_nsort.gif" />
+    <Content Include="manage\img\toexcel.gif" />
+    <Content Include="manage\img\top_bg.gif" />
+    <Content Include="manage\img\top_cms.gif" />
+    <Content Include="manage\img\up_1.gif" />
+    <Content Include="manage\img\up_2.gif" />
+    <Content Include="manage\img\VirusAlert.jpg" />
+    <Content Include="manage\InfoMaintenance\InstagramAdd.aspx" />
+    <Content Include="manage\InfoMaintenance\InstagramList.aspx" />
+    <Content Include="manage\InfoMaintenance\jinduAddinfo.aspx" />
+    <Content Include="manage\InfoMaintenance\jinduEditinfo.aspx" />
+    <Content Include="manage\InfoMaintenance\jinduinfo.aspx" />
+    <Content Include="manage\InfoMaintenance\marketInfo.aspx" />
+    <Content Include="manage\InfoMaintenance\OrderTable .aspx" />
+    <Content Include="manage\InfoMaintenance\PicShowAdd.aspx" />
+    <Content Include="manage\InfoMaintenance\PicShowEdit.aspx" />
+    <Content Include="manage\InfoMaintenance\PicShowList.aspx" />
+    <Content Include="manage\InfoMaintenance\PicTypeAdd.aspx" />
+    <Content Include="manage\InfoMaintenance\PicTypeEdit.aspx" />
+    <Content Include="manage\InfoMaintenance\PicTypeList.aspx" />
+    <Content Include="manage\InfoMaintenance\QrCodeInfo.aspx" />
+    <Content Include="manage\InfoMaintenance\SysNewsAdd.aspx" />
+    <Content Include="manage\InfoMaintenance\SysNewsEdit.aspx" />
+    <Content Include="manage\InfoMaintenance\SysNewsList.aspx" />
+    <Content Include="manage\InfoMaintenance\TuiJianInfoAdd.aspx" />
+    <Content Include="manage\jjrmantenance\RegistInfo.aspx" />
+    <Content Include="manage\jjrmantenance\RegistJSInfo.aspx" />
+    <Content Include="manage\jjrmantenance\RegRecomdInfo.aspx" />
+    <Content Include="manage\jjrmantenance\upStatusRecmd.aspx" />
+    <Content Include="manage\kindeditor-4.1.10\asp.net\bin\LitJSON.dll" />
+    <Content Include="manage\kindeditor-4.1.10\asp.net\demo.aspx" />
+    <Content Include="manage\kindeditor-4.1.10\asp.net\README.txt" />
+    <Content Include="manage\kindeditor-4.1.10\kindeditor-all-min.js" />
+    <Content Include="manage\kindeditor-4.1.10\kindeditor-all.js" />
+    <Content Include="manage\kindeditor-4.1.10\kindeditor-min.js" />
+    <Content Include="manage\kindeditor-4.1.10\kindeditor.js" />
+    <Content Include="manage\kindeditor-4.1.10\lang\ar.js" />
+    <Content Include="manage\kindeditor-4.1.10\lang\en.js" />
+    <Content Include="manage\kindeditor-4.1.10\lang\ko.js" />
+    <Content Include="manage\kindeditor-4.1.10\lang\zh_CN.js" />
+    <Content Include="manage\kindeditor-4.1.10\lang\zh_TW.js" />
+    <Content Include="manage\kindeditor-4.1.10\license.txt" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\anchor\anchor.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\autoheight\autoheight.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\baidumap\baidumap.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\baidumap\index.html" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\baidumap\map.html" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\clearhtml\clearhtml.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\code\code.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\code\prettify.css" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\code\prettify.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\emoticons.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\0.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\1.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\10.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\100.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\101.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\102.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\103.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\104.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\105.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\106.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\107.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\108.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\109.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\11.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\110.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\111.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\112.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\113.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\114.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\115.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\116.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\117.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\118.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\119.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\12.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\120.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\121.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\122.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\123.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\124.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\125.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\126.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\127.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\128.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\129.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\13.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\130.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\131.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\132.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\133.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\134.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\14.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\15.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\16.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\17.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\18.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\19.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\2.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\20.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\21.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\22.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\23.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\24.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\25.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\26.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\27.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\28.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\29.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\3.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\30.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\31.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\32.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\33.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\34.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\35.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\36.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\37.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\38.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\39.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\4.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\40.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\41.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\42.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\43.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\44.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\45.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\46.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\47.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\48.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\49.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\5.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\50.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\51.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\52.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\53.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\54.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\55.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\56.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\57.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\58.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\59.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\6.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\60.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\61.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\62.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\63.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\64.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\65.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\66.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\67.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\68.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\69.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\7.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\70.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\71.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\72.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\73.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\74.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\75.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\76.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\77.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\78.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\79.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\8.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\80.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\81.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\82.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\83.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\84.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\85.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\86.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\87.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\88.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\89.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\9.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\90.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\91.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\92.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\93.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\94.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\95.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\96.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\97.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\98.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\99.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\emoticons\images\static.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\filemanager\filemanager.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\filemanager\images\file-16.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\filemanager\images\file-64.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\filemanager\images\go-up.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\flash\flash.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\image\image.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\image\images\align_left.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\image\images\align_right.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\image\images\align_top.gif" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\image\images\refresh.png" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\insertfile\insertfile.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\lineheight\lineheight.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\link\link.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\map\map.html" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\map\map.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\media\media.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\multiimage\images\image.png" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\multiimage\multiimage.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\pagebreak\pagebreak.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\plainpaste\plainpaste.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\preview\preview.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\quickformat\quickformat.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\table\table.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\template\html\1.html" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\template\html\2.html" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\template\html\3.html" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\template\template.js" />
+    <Content Include="manage\kindeditor-4.1.10\plugins\wordpaste\wordpaste.js" />
+    <Content Include="manage\kindeditor-4.1.10\themes\common\anchor.gif" />
+    <Content Include="manage\kindeditor-4.1.10\themes\common\blank.gif" />
+    <Content Include="manage\kindeditor-4.1.10\themes\common\flash.gif" />
+    <Content Include="manage\kindeditor-4.1.10\themes\common\loading.gif" />
+    <Content Include="manage\kindeditor-4.1.10\themes\common\media.gif" />
+    <Content Include="manage\kindeditor-4.1.10\themes\common\rm.gif" />
+    <Content Include="manage\kindeditor-4.1.10\themes\default\background.png" />
+    <Content Include="manage\kindeditor-4.1.10\themes\default\default.css" />
+    <Content Include="manage\kindeditor-4.1.10\themes\default\default.png" />
+    <Content Include="manage\kindeditor-4.1.10\themes\qq\editor.gif" />
+    <Content Include="manage\kindeditor-4.1.10\themes\qq\qq.css" />
+    <Content Include="manage\kindeditor-4.1.10\themes\simple\simple.css" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160215\20160215112624_9582.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160215\20160215112915_7552.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160215\20160215143718_0198.png" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160602\20160602112640_0890.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160612\20160612110033_8364.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160612\20160612122048_3593.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160614\20160614162855_3712.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160614\20160614162941_2214.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160614\20160614163319_7092.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160615\20160615110908_7053.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160615\20160615165208_2832.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160615\20160615165335_2228.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160615\20160615165443_4559.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160616\20160616113822_1516.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160616\20160616113913_2604.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160616\20160616113950_2887.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160616\20160616114108_4156.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160616\20160616114203_3941.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160616\20160616114307_5269.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160617\20160617164131_1185.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160617\20160617164154_8081.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160617\20160617164746_1314.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160630\20160630111343_1768.jpg" />
+    <Content Include="manage\kindeditor-4.1.10\upload\image\20160630\20160630111408_4538.jpg" />
+    <Content Include="manage\left.aspx" />
+    <Content Include="manage\lib\Auth.js" />
+    <Content Include="manage\lib\common.js" />
+    <Content Include="manage\lib\DataValid.js" />
+    <Content Include="manage\lib\ieonly\excanvas.js" />
+    <Content Include="manage\lib\ieonly\html5shiv.js" />
+    <Content Include="manage\lib\ieonly\respond.js" />
+    <Content Include="manage\lib\jquery-1.4.1.min.js" />
+    <Content Include="manage\lib\jquery-1.6.2.js" />
+    <Content Include="manage\lib\jquery.ztree.core.js" />
+    <Content Include="manage\lib\meizzDate.js" />
+    <Content Include="manage\lib\modelChoose.js" />
+    <Content Include="manage\lib\Module.js" />
+    <Content Include="manage\lib\Module1.js" />
+    <Content Include="manage\lib\navbar.js" />
+    <Content Include="manage\lib\previewimg.js" />
+    <Content Include="manage\lib\public.js" />
+    <Content Include="manage\lib\utils.js" />
+    <Content Include="manage\lib\VerificationCode.js" />
+    <Content Include="manage\lib\zui.min.js" />
+    <Content Include="manage\LoginOut.aspx" />
+    <Content Include="manage\Manager_al\banneradd.aspx" />
+    <Content Include="manage\Manager_al\bannerlist.aspx" />
+    <Content Include="manage\Manager_al\infoadd.aspx" />
+    <Content Include="manage\Manager_al\infolist.aspx" />
+    <Content Include="manage\Manager_dl\WXKewordsAdd.aspx" />
+    <Content Include="manage\Manager_dl\WXKewordsList.aspx" />
+    <Content Include="manage\Manager_dl\znke_Info.aspx" />
+    <Content Include="manage\Manager_Groups\Manager_Groups_Add.aspx" />
+    <Content Include="manage\Manager_Groups\Manager_Groups_List.aspx" />
+    <Content Include="manage\Manager_Info\keyword.aspx" />
+    <Content Include="manage\Manager_Info\keywordAdd.aspx" />
+    <Content Include="manage\Manager_Info\ZnkfInfo.aspx" />
+    <Content Include="manage\Manager_LiveInfo\ActivityBannerAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\ActivityBannerList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BannerAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BannerList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDGAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\bdgjList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDJKAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDJKGL.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDMSAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDMSBannerAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDMSBannerList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDMSList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDYWAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDYWList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDYWTypeAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDYWTypeList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDZCAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDZCList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDZSAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BDZSList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BMServerAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\BMSeverList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\LiveInfoAdd.aspx" />
+    <Content Include="manage\Manager_LiveInfo\LiveInfoBMList.aspx" />
+    <Content Include="manage\Manager_LiveInfo\LiveInfoList.aspx" />
+    <Content Include="manage\Manager_llHD\HdInfoList.aspx" />
+    <Content Include="manage\Manager_llHD\HdPostList.aspx" />
+    <Content Include="manage\Manager_llHD\JFgz.aspx" />
+    <Content Include="manage\Manager_llHD\LPDHList.aspx" />
+    <Content Include="manage\Manager_llHD\ProductAdd.aspx" />
+    <Content Include="manage\Manager_llHD\ProductList.aspx" />
+    <Content Include="manage\Manager_llHD\TagAddInfo.aspx" />
+    <Content Include="manage\Manager_llHD\TagList.aspx" />
+    <Content Include="manage\Manager_MemberInfo\AllMember.aspx" />
+    <Content Include="manage\Manager_MemberInfo\JFList.aspx" />
+    <Content Include="manage\Manager_Role\sys_Module_Add.aspx" />
+    <Content Include="manage\Manager_Role\sys_Module_Manage.aspx" />
+    <Content Include="manage\Manager_Role\sys_Module_Menu.aspx" />
+    <Content Include="manage\Manager_Role\sys_Module_Tree.aspx" />
+    <Content Include="manage\Manager_User\Manager_User_Add.aspx" />
+    <Content Include="manage\Manager_User\Manager_User_Delete.aspx" />
+    <Content Include="manage\Manager_User\Manager_User_List.aspx" />
+    <Content Include="manage\Manager_Wy\WYBXListInf.aspx" />
+    <Content Include="manage\Manager_Wy\WYNoticeAdd.aspx" />
+    <Content Include="manage\Manager_Wy\WYNoticeList.aspx" />
+    <Content Include="manage\My97DatePicker\calendar.js" />
+    <Content Include="manage\My97DatePicker\config.js" />
+    <Content Include="manage\My97DatePicker\lang\en.js" />
+    <Content Include="manage\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="manage\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="manage\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="manage\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="manage\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="manage\My97DatePicker\skin\default\img.gif" />
+    <Content Include="manage\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="manage\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="manage\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="manage\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="manage\My97DatePicker\WdatePicker.js" />
+    <Content Include="manage\SphereActivity\ActivityAdd.aspx" />
+    <Content Include="manage\SphereActivity\ActivityEdit.aspx" />
+    <Content Include="manage\SphereActivity\ActivityList.aspx" />
+    <Content Include="manage\SphereActivity\keyword.aspx" />
+    <Content Include="manage\SphereActivity\keywordadd.aspx" />
+    <Content Include="manage\SphereActivity\keywordedit.aspx" />
+    <Content Include="manage\SphereActivity\Memberinfo.aspx" />
+    <Content Include="manage\SphereActivity\OnlineRegist.aspx" />
+    <Content Include="manage\SphereActivity\OnlineRegistEdit.aspx" />
+    <Content Include="manage\SphereActivity\znkf.aspx" />
+    <Content Include="manage\SysMaintenance\AccountAdd.aspx" />
+    <Content Include="manage\SysMaintenance\AccountEdit.aspx" />
+    <Content Include="manage\SysMaintenance\AccountList.aspx" />
+    <Content Include="manage\SysMaintenance\AccountPopAllot.aspx" />
+    <Content Include="manage\SysMaintenance\ModuleAdd.aspx" />
+    <Content Include="manage\SysMaintenance\ModuleEdit.aspx" />
+    <Content Include="manage\SysMaintenance\ModuleList.aspx" />
+    <Content Include="manage\SysMaintenance\PageAdd.aspx" />
+    <Content Include="manage\SysMaintenance\PageEdit.aspx" />
+    <Content Include="manage\SysMaintenance\PageList.aspx" />
+    <Content Include="manage\SysMaintenance\PasswordEdit.aspx" />
+    <Content Include="manage\top.aspx" />
+    <Content Include="manage\upload.aspx" />
     <Content Include="OtInfo\img\no.png" />
     <Content Include="OtInfo\img\sy.jpg" />
     <Content Include="OtInfo\img\yes.png" />
@@ -768,6 +1403,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="weixin.aspx" />
+    <Content Include="wsinfo\css\app.css" />
+    <Content Include="wsinfo\img\loading_sprite_white.png" />
+    <Content Include="wsinfo\js\app.js" />
+    <Content Include="wsinfo\wsinfo.html" />
     <Content Include="yhjc\1.html" />
     <Content Include="yhjc\css\animate.min.css" />
     <Content Include="yhjc\img\1.jpg" />
@@ -1007,6 +1646,14 @@
     <Content Include="zpzs\img\g5.jpg" />
     <Content Include="zpzs\img\ph.png" />
     <Content Include="zpzs\img\xq.png" />
+    <Content Include="zpzs\img\yl\bg.jpg" />
+    <Content Include="zpzs\img\yl\fsx.jpg" />
+    <Content Include="zpzs\img\yl\gz.png" />
+    <Content Include="zpzs\img\yl\pm.png" />
+    <Content Include="zpzs\img\yl\t1.jpg" />
+    <Content Include="zpzs\img\yl\t2.jpg" />
+    <Content Include="zpzs\img\yl\tips.jpg" />
+    <Content Include="zpzs\ylhd.aspx" />
     <Content Include="zpzs\yshd.aspx" />
     <Content Include="t1.html" />
     <Content Include="t1\animate_40369ef.css" />
@@ -1188,9 +1835,11 @@
     <Compile Include="Appcode\Activity.cs" />
     <Compile Include="Appcode\BannerInfo.cs" />
     <Compile Include="Appcode\Config.cs" />
+    <Compile Include="Appcode\CookieHelper.cs" />
     <Compile Include="Appcode\Data.cs" />
     <Compile Include="Appcode\DeleteValidate.cs" />
     <Compile Include="Appcode\DESCrypt.cs" />
+    <Compile Include="Appcode\DNTRequest.cs" />
     <Compile Include="Appcode\Encrypt.cs" />
     <Compile Include="Appcode\Exception.cs" />
     <Compile Include="Appcode\Forms.cs" />
@@ -1199,9 +1848,12 @@
     <Compile Include="Appcode\HdPicHit.cs" />
     <Compile Include="Appcode\HttpService.cs" />
     <Compile Include="Appcode\Log.cs" />
+    <Compile Include="Appcode\Logger.cs" />
     <Compile Include="Appcode\ManageBasePage1.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Appcode\Manager_Groups.cs" />
+    <Compile Include="Appcode\Manager_Role.cs" />
     <Compile Include="Appcode\MsgHelper.cs" />
     <Compile Include="Appcode\OauthInfo.cs" />
     <Compile Include="Appcode\PageValidate.cs" />
@@ -1300,6 +1952,16 @@
     <Compile Include="lnInfo\lndzinfo.aspx.designer.cs">
       <DependentUpon>lndzinfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="lnInfo\lnlotter.ashx.cs">
+      <DependentUpon>lnlotter.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lnInfo\lnlotter.aspx.cs">
+      <DependentUpon>lnlotter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lnInfo\lnlotter.aspx.designer.cs">
+      <DependentUpon>lnlotter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="lnInfo\lnychindex.aspx.cs">
       <DependentUpon>lnychindex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1330,6 +1992,838 @@
     </Compile>
     <Compile Include="lnInfo\xyindex.aspx.designer.cs">
       <DependentUpon>xyindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\admin_login.aspx.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\admin_login.aspx.designer.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\ashx\Sys_Login.ashx.cs">
+      <DependentUpon>Sys_Login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\controls\bottom.ascx.cs">
+      <DependentUpon>bottom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\bottom.ascx.designer.cs">
+      <DependentUpon>bottom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\controls\carheader.ascx.cs">
+      <DependentUpon>carheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\formheader.ascx.cs">
+      <DependentUpon>formheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\indexheader.ascx.cs">
+      <DependentUpon>indexheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\Info\head.ascx.cs">
+      <DependentUpon>head.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\newsheader.ascx.cs">
+      <DependentUpon>newsheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\serveheader.ascx.cs">
+      <DependentUpon>serveheader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\syshead.ascx.cs">
+      <DependentUpon>syshead.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\controls\syshead.ascx.designer.cs">
+      <DependentUpon>syshead.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\err.aspx.cs">
+      <DependentUpon>err.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\err.aspx.designer.cs">
+      <DependentUpon>err.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\frame.aspx.cs">
+      <DependentUpon>frame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\frame.aspx.designer.cs">
+      <DependentUpon>frame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\img.aspx.cs">
+      <DependentUpon>img.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\img.aspx.designer.cs">
+      <DependentUpon>img.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\InstagramAdd.aspx.cs">
+      <DependentUpon>InstagramAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\InstagramAdd.aspx.designer.cs">
+      <DependentUpon>InstagramAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\InstagramList.aspx.cs">
+      <DependentUpon>InstagramList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\InstagramList.aspx.designer.cs">
+      <DependentUpon>InstagramList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\jinduAddinfo.aspx.cs">
+      <DependentUpon>jinduAddinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\jinduAddinfo.aspx.designer.cs">
+      <DependentUpon>jinduAddinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\jinduEditinfo.aspx.cs">
+      <DependentUpon>jinduEditinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\jinduEditinfo.aspx.designer.cs">
+      <DependentUpon>jinduEditinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\jinduinfo.aspx.cs">
+      <DependentUpon>jinduinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\jinduinfo.aspx.designer.cs">
+      <DependentUpon>jinduinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\marketInfo.aspx.cs">
+      <DependentUpon>marketInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\marketInfo.aspx.designer.cs">
+      <DependentUpon>marketInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\OrderTable .aspx.cs">
+      <DependentUpon>OrderTable .aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\OrderTable .aspx.designer.cs">
+      <DependentUpon>OrderTable .aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicShowAdd.aspx.cs">
+      <DependentUpon>PicShowAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicShowAdd.aspx.designer.cs">
+      <DependentUpon>PicShowAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicShowEdit.aspx.cs">
+      <DependentUpon>PicShowEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicShowEdit.aspx.designer.cs">
+      <DependentUpon>PicShowEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicShowList.aspx.cs">
+      <DependentUpon>PicShowList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicShowList.aspx.designer.cs">
+      <DependentUpon>PicShowList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicTypeAdd.aspx.cs">
+      <DependentUpon>PicTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicTypeAdd.aspx.designer.cs">
+      <DependentUpon>PicTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicTypeEdit.aspx.cs">
+      <DependentUpon>PicTypeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicTypeEdit.aspx.designer.cs">
+      <DependentUpon>PicTypeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicTypeList.aspx.cs">
+      <DependentUpon>PicTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\PicTypeList.aspx.designer.cs">
+      <DependentUpon>PicTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\QrCodeInfo.aspx.cs">
+      <DependentUpon>QrCodeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\QrCodeInfo.aspx.designer.cs">
+      <DependentUpon>QrCodeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsAdd.aspx.cs">
+      <DependentUpon>SysNewsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsAdd.aspx.designer.cs">
+      <DependentUpon>SysNewsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsEdit.aspx.cs">
+      <DependentUpon>SysNewsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsEdit.aspx.designer.cs">
+      <DependentUpon>SysNewsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsList.aspx.cs">
+      <DependentUpon>SysNewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsList.aspx.designer.cs">
+      <DependentUpon>SysNewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsmaster.master.cs">
+      <DependentUpon>SysNewsmaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\SysNewsmaster.master.designer.cs">
+      <DependentUpon>SysNewsmaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\TuiJianInfoAdd.aspx.cs">
+      <DependentUpon>TuiJianInfoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\InfoMaintenance\TuiJianInfoAdd.aspx.designer.cs">
+      <DependentUpon>TuiJianInfoAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\JJRMaster.Master.cs">
+      <DependentUpon>JJRMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\JJRMaster.Master.designer.cs">
+      <DependentUpon>JJRMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\RegistInfo.aspx.cs">
+      <DependentUpon>RegistInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\RegistInfo.aspx.designer.cs">
+      <DependentUpon>RegistInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\RegistJSInfo.aspx.cs">
+      <DependentUpon>RegistJSInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\RegistJSInfo.aspx.designer.cs">
+      <DependentUpon>RegistJSInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\RegRecomdInfo.aspx.cs">
+      <DependentUpon>RegRecomdInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\RegRecomdInfo.aspx.designer.cs">
+      <DependentUpon>RegRecomdInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\upStatusRecmd.aspx.cs">
+      <DependentUpon>upStatusRecmd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\jjrmantenance\upStatusRecmd.aspx.designer.cs">
+      <DependentUpon>upStatusRecmd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\left.aspx.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\left.aspx.designer.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_al\banneradd.aspx.cs">
+      <DependentUpon>banneradd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_al\banneradd.aspx.designer.cs">
+      <DependentUpon>banneradd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_al\bannerlist.aspx.cs">
+      <DependentUpon>bannerlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_al\bannerlist.aspx.designer.cs">
+      <DependentUpon>bannerlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_al\infoadd.aspx.cs">
+      <DependentUpon>infoadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_al\infoadd.aspx.designer.cs">
+      <DependentUpon>infoadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_al\infolist.aspx.cs">
+      <DependentUpon>infolist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_al\infolist.aspx.designer.cs">
+      <DependentUpon>infolist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_dl\WXKewordsAdd.aspx.cs">
+      <DependentUpon>WXKewordsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_dl\WXKewordsAdd.aspx.designer.cs">
+      <DependentUpon>WXKewordsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_dl\WXKewordsList.aspx.cs">
+      <DependentUpon>WXKewordsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_dl\WXKewordsList.aspx.designer.cs">
+      <DependentUpon>WXKewordsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_dl\znke_Info.aspx.cs">
+      <DependentUpon>znke_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_dl\znke_Info.aspx.designer.cs">
+      <DependentUpon>znke_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Groups\Manager_Groups_Add.aspx.cs">
+      <DependentUpon>Manager_Groups_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Groups\Manager_Groups_Add.aspx.designer.cs">
+      <DependentUpon>Manager_Groups_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Groups\Manager_Groups_List.aspx.cs">
+      <DependentUpon>Manager_Groups_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Groups\Manager_Groups_List.aspx.designer.cs">
+      <DependentUpon>Manager_Groups_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Info\keyword.aspx.cs">
+      <DependentUpon>keyword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Info\keyword.aspx.designer.cs">
+      <DependentUpon>keyword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Info\keywordAdd.aspx.cs">
+      <DependentUpon>keywordAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Info\keywordAdd.aspx.designer.cs">
+      <DependentUpon>keywordAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Info\ZnkfInfo.aspx.cs">
+      <DependentUpon>ZnkfInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Info\ZnkfInfo.aspx.designer.cs">
+      <DependentUpon>ZnkfInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\ActivityBannerAdd.aspx.cs">
+      <DependentUpon>ActivityBannerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\ActivityBannerAdd.aspx.designer.cs">
+      <DependentUpon>ActivityBannerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\ActivityBannerList.aspx.cs">
+      <DependentUpon>ActivityBannerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\ActivityBannerList.aspx.designer.cs">
+      <DependentUpon>ActivityBannerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BannerAdd.aspx.cs">
+      <DependentUpon>BannerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BannerAdd.aspx.designer.cs">
+      <DependentUpon>BannerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BannerList.aspx.cs">
+      <DependentUpon>BannerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BannerList.aspx.designer.cs">
+      <DependentUpon>BannerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDGAdd.aspx.cs">
+      <DependentUpon>BDGAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDGAdd.aspx.designer.cs">
+      <DependentUpon>BDGAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\bdgjList.aspx.cs">
+      <DependentUpon>bdgjList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\bdgjList.aspx.designer.cs">
+      <DependentUpon>bdgjList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDJKAdd.aspx.cs">
+      <DependentUpon>BDJKAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDJKAdd.aspx.designer.cs">
+      <DependentUpon>BDJKAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDJKGL.aspx.cs">
+      <DependentUpon>BDJKGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDJKGL.aspx.designer.cs">
+      <DependentUpon>BDJKGL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSAdd.aspx.cs">
+      <DependentUpon>BDMSAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSAdd.aspx.designer.cs">
+      <DependentUpon>BDMSAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSBannerAdd.aspx.cs">
+      <DependentUpon>BDMSBannerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSBannerAdd.aspx.designer.cs">
+      <DependentUpon>BDMSBannerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSBannerList.aspx.cs">
+      <DependentUpon>BDMSBannerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSBannerList.aspx.designer.cs">
+      <DependentUpon>BDMSBannerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSList.aspx.cs">
+      <DependentUpon>BDMSList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDMSList.aspx.designer.cs">
+      <DependentUpon>BDMSList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWAdd.aspx.cs">
+      <DependentUpon>BDYWAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWAdd.aspx.designer.cs">
+      <DependentUpon>BDYWAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWList.aspx.cs">
+      <DependentUpon>BDYWList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWList.aspx.designer.cs">
+      <DependentUpon>BDYWList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWTypeAdd.aspx.cs">
+      <DependentUpon>BDYWTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWTypeAdd.aspx.designer.cs">
+      <DependentUpon>BDYWTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWTypeList.aspx.cs">
+      <DependentUpon>BDYWTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDYWTypeList.aspx.designer.cs">
+      <DependentUpon>BDYWTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZCAdd.aspx.cs">
+      <DependentUpon>BDZCAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZCAdd.aspx.designer.cs">
+      <DependentUpon>BDZCAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZCList.aspx.cs">
+      <DependentUpon>BDZCList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZCList.aspx.designer.cs">
+      <DependentUpon>BDZCList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZSAdd.aspx.cs">
+      <DependentUpon>BDZSAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZSAdd.aspx.designer.cs">
+      <DependentUpon>BDZSAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZSList.aspx.cs">
+      <DependentUpon>BDZSList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BDZSList.aspx.designer.cs">
+      <DependentUpon>BDZSList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BMServerAdd.aspx.cs">
+      <DependentUpon>BMServerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BMServerAdd.aspx.designer.cs">
+      <DependentUpon>BMServerAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BMSeverList.aspx.cs">
+      <DependentUpon>BMSeverList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\BMSeverList.aspx.designer.cs">
+      <DependentUpon>BMSeverList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\LiveInfoAdd.aspx.cs">
+      <DependentUpon>LiveInfoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\LiveInfoAdd.aspx.designer.cs">
+      <DependentUpon>LiveInfoAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\LiveInfoBMList.aspx.cs">
+      <DependentUpon>LiveInfoBMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\LiveInfoBMList.aspx.designer.cs">
+      <DependentUpon>LiveInfoBMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\LiveInfoList.aspx.cs">
+      <DependentUpon>LiveInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_LiveInfo\LiveInfoList.aspx.designer.cs">
+      <DependentUpon>LiveInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\HdInfoList.aspx.cs">
+      <DependentUpon>HdInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\HdInfoList.aspx.designer.cs">
+      <DependentUpon>HdInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\HdPostList.aspx.cs">
+      <DependentUpon>HdPostList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\HdPostList.aspx.designer.cs">
+      <DependentUpon>HdPostList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\JFgz.aspx.cs">
+      <DependentUpon>JFgz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\JFgz.aspx.designer.cs">
+      <DependentUpon>JFgz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\LPDHList.aspx.cs">
+      <DependentUpon>LPDHList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\LPDHList.aspx.designer.cs">
+      <DependentUpon>LPDHList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\ProductAdd.aspx.cs">
+      <DependentUpon>ProductAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\ProductAdd.aspx.designer.cs">
+      <DependentUpon>ProductAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\TagAddInfo.aspx.cs">
+      <DependentUpon>TagAddInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\TagAddInfo.aspx.designer.cs">
+      <DependentUpon>TagAddInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\TagList.aspx.cs">
+      <DependentUpon>TagList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_llHD\TagList.aspx.designer.cs">
+      <DependentUpon>TagList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_MemberInfo\AllMember.aspx.cs">
+      <DependentUpon>AllMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_MemberInfo\AllMember.aspx.designer.cs">
+      <DependentUpon>AllMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_MemberInfo\JFList.aspx.cs">
+      <DependentUpon>JFList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_MemberInfo\JFList.aspx.designer.cs">
+      <DependentUpon>JFList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Add.aspx.cs">
+      <DependentUpon>sys_Module_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Add.aspx.designer.cs">
+      <DependentUpon>sys_Module_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Manage.aspx.cs">
+      <DependentUpon>sys_Module_Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Manage.aspx.designer.cs">
+      <DependentUpon>sys_Module_Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Menu.aspx.cs">
+      <DependentUpon>sys_Module_Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Menu.aspx.designer.cs">
+      <DependentUpon>sys_Module_Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Tree.aspx.cs">
+      <DependentUpon>sys_Module_Tree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Role\sys_Module_Tree.aspx.designer.cs">
+      <DependentUpon>sys_Module_Tree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_User\Manager_User_Add.aspx.cs">
+      <DependentUpon>Manager_User_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_User\Manager_User_Add.aspx.designer.cs">
+      <DependentUpon>Manager_User_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_User\Manager_User_Delete.aspx.cs">
+      <DependentUpon>Manager_User_Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_User\Manager_User_Delete.aspx.designer.cs">
+      <DependentUpon>Manager_User_Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_User\Manager_User_List.aspx.cs">
+      <DependentUpon>Manager_User_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_User\Manager_User_List.aspx.designer.cs">
+      <DependentUpon>Manager_User_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Wy\WYBXListInf.aspx.cs">
+      <DependentUpon>WYBXListInf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Wy\WYBXListInf.aspx.designer.cs">
+      <DependentUpon>WYBXListInf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Wy\WYNoticeAdd.aspx.cs">
+      <DependentUpon>WYNoticeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Wy\WYNoticeAdd.aspx.designer.cs">
+      <DependentUpon>WYNoticeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\Manager_Wy\WYNoticeList.aspx.cs">
+      <DependentUpon>WYNoticeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\Manager_Wy\WYNoticeList.aspx.designer.cs">
+      <DependentUpon>WYNoticeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\Activity.master.cs">
+      <DependentUpon>Activity.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\Activity.master.designer.cs">
+      <DependentUpon>Activity.master</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\ActivityAdd.aspx.cs">
+      <DependentUpon>ActivityAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\ActivityAdd.aspx.designer.cs">
+      <DependentUpon>ActivityAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\ActivityEdit.aspx.cs">
+      <DependentUpon>ActivityEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\ActivityEdit.aspx.designer.cs">
+      <DependentUpon>ActivityEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\ActivityList.aspx.cs">
+      <DependentUpon>ActivityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\ActivityList.aspx.designer.cs">
+      <DependentUpon>ActivityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\keyword.aspx.cs">
+      <DependentUpon>keyword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\keyword.aspx.designer.cs">
+      <DependentUpon>keyword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\keywordadd.aspx.cs">
+      <DependentUpon>keywordadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\keywordadd.aspx.designer.cs">
+      <DependentUpon>keywordadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\keywordedit.aspx.cs">
+      <DependentUpon>keywordedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\keywordedit.aspx.designer.cs">
+      <DependentUpon>keywordedit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\Memberinfo.aspx.cs">
+      <DependentUpon>Memberinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\Memberinfo.aspx.designer.cs">
+      <DependentUpon>Memberinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\OnlineRegist.aspx.cs">
+      <DependentUpon>OnlineRegist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\OnlineRegist.aspx.designer.cs">
+      <DependentUpon>OnlineRegist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\OnlineRegistEdit.aspx.cs">
+      <DependentUpon>OnlineRegistEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\OnlineRegistEdit.aspx.designer.cs">
+      <DependentUpon>OnlineRegistEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SphereActivity\znkf.aspx.cs">
+      <DependentUpon>znkf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SphereActivity\znkf.aspx.designer.cs">
+      <DependentUpon>znkf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountAdd.aspx.cs">
+      <DependentUpon>AccountAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountAdd.aspx.designer.cs">
+      <DependentUpon>AccountAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountEdit.aspx.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountEdit.aspx.designer.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountList.aspx.cs">
+      <DependentUpon>AccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountList.aspx.designer.cs">
+      <DependentUpon>AccountList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountPopAllot.aspx.cs">
+      <DependentUpon>AccountPopAllot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\AccountPopAllot.aspx.designer.cs">
+      <DependentUpon>AccountPopAllot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\maintenancemaster.master.cs">
+      <DependentUpon>maintenancemaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\maintenancemaster.master.designer.cs">
+      <DependentUpon>maintenancemaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\ModuleAdd.aspx.cs">
+      <DependentUpon>ModuleAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\ModuleAdd.aspx.designer.cs">
+      <DependentUpon>ModuleAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\ModuleEdit.aspx.cs">
+      <DependentUpon>ModuleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\ModuleEdit.aspx.designer.cs">
+      <DependentUpon>ModuleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\ModuleList.aspx.cs">
+      <DependentUpon>ModuleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\ModuleList.aspx.designer.cs">
+      <DependentUpon>ModuleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PageAdd.aspx.cs">
+      <DependentUpon>PageAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PageAdd.aspx.designer.cs">
+      <DependentUpon>PageAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PageEdit.aspx.cs">
+      <DependentUpon>PageEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PageEdit.aspx.designer.cs">
+      <DependentUpon>PageEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PageList.aspx.cs">
+      <DependentUpon>PageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PageList.aspx.designer.cs">
+      <DependentUpon>PageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PasswordEdit.aspx.cs">
+      <DependentUpon>PasswordEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\SysMaintenance\PasswordEdit.aspx.designer.cs">
+      <DependentUpon>PasswordEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\top.aspx.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\top.aspx.designer.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage\upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -1368,6 +2862,9 @@
     </Compile>
     <Compile Include="weixin.aspx.designer.cs">
       <DependentUpon>weixin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wsinfo\ashx\helperInfo.ashx.cs">
+      <DependentUpon>helperInfo.ashx</DependentUpon>
     </Compile>
     <Compile Include="yhjc\helper.ashx.cs">
       <DependentUpon>helper.ashx</DependentUpon>
@@ -1487,6 +2984,13 @@
     <Compile Include="zpzs\helper.ashx.cs">
       <DependentUpon>helper.ashx</DependentUpon>
     </Compile>
+    <Compile Include="zpzs\ylhd.aspx.cs">
+      <DependentUpon>ylhd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zpzs\ylhd.aspx.designer.cs">
+      <DependentUpon>ylhd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="zpzs\yshd.aspx.cs">
       <DependentUpon>yshd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1517,7 +3021,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Files\" />
+    <Folder Include="Files\NewsImg\" />
+    <Folder Include="manage\kindeditor-4.1.10\attached\image\" />
     <Folder Include="ServiceLib\" />
     <Folder Include="zshmsg\images\" />
   </ItemGroup>
@@ -1560,8 +3065,27 @@
     <Content Include="Tepay\payhelperinfo.ashx" />
     <Content Include="lnInfo\Operation.ashx" />
     <Content Include="lnInfo\css\tt0037m_.ttf" />
+    <Content Include="manage\ashx\Sys_Login.ashx" />
+    <Content Include="manage\css\css.zip" />
+    <Content Include="manage\dist\fonts\zenicon.eot" />
+    <Content Include="manage\dist\fonts\zenicon.ttf" />
+    <Content Include="manage\dist\fonts\zenicon.woff" />
+    <Content Include="manage\dist\lib\kindeditor\themes\default\default.psd" />
+    <Content Include="manage\img\icon\vssver2.scc" />
+    <Content Include="manage\InfoMaintenance\SysNewsmaster.master" />
+    <Content Include="manage\jjrmantenance\JJRMaster.Master" />
+    <Content Include="manage\kindeditor-4.1.10\asp.net\file_manager_json.ashx" />
+    <Content Include="manage\kindeditor-4.1.10\asp.net\upload_json.ashx" />
+    <Content Include="manage\My97DatePicker\lang\vssver2.scc" />
+    <Content Include="manage\My97DatePicker\skin\default\vssver2.scc" />
+    <Content Include="manage\My97DatePicker\skin\vssver2.scc" />
+    <Content Include="manage\My97DatePicker\skin\whyGreen\vssver2.scc" />
+    <Content Include="manage\SphereActivity\Activity.master" />
+    <Content Include="manage\SysMaintenance\maintenancemaster.master" />
+    <Content Include="lnInfo\lnlotter.ashx" />
     <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
     <Content Include="yhjc\helper.ashx" />
+    <Content Include="wsinfo\ashx\helperInfo.ashx" />
     <None Include="yqh\cert1\apiclient_cert.p12" />
     <None Include="yqh\cert1\apiclient_cert.pem" />
     <None Include="yqh\cert1\apiclient_key.pem" />

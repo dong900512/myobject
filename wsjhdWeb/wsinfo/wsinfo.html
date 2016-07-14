@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>案例展示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--标准mui.css-->
+
+    <link href="/wsinfo/css/app.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        * { -webkit-box-sizing: initial; box-sizing: initial; }
+        .ui-list-img img { max-width: 100%; }
+        .ui-list-img { max-width: 30%; width: auto; height: auto; }
+        .ui-list-info { max-height: 40%; }
+        .ui-list-link .ui-list-info { padding-right: 0px; }
+        .ui-list li h4 { font-weight: bold; }
+        .ui-txt-info { max-width: 23%; }
+            .ui-txt-info a { display: block; }
+            .ui-txt-info img { max-width: 100%; margin-top: 15%; }
+        .demo-desc { padding: 10px; font-size: 16px; color: #2facf4; }
+        .ui-btn1 { background-color: #2facf4; max-width: 2%; min-width: 2%; border: 0; padding: 4% 0; vertical-align: middle; }
+        .ui-tab-nav { overflow-x: scroll; background-color: #f2f2f2; }
+            .ui-tab-nav li { min-width: 80px !important; cursor: pointer; height: auto !important; }
+        .swiper-slide { overflow-y: auto; }
+        .img-slide { position: relative; width: 100%; height: 160px; overflow: hidden; }
+            .img-slide ul { width: 100%; height: 100%; }
+            .img-slide li { width: 100%; height: 100%; background-size: 100% 100%; }
+                .img-slide li a { width: 100%; height: 100%; }
+                    .img-slide li a p { position: absolute; left: 0; right: 0; bottom: 0; height: 1.4em; font-size: 16px; padding: 20px 50px 12px 13px; background-image: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%); /* background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%); */ color: #fff; text-shadow: 0 1px 0 rgba(0,0,0,.5); width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
+                .img-slide li img { width: 100%; height: 100%; }
+            .img-slide .controller { position: absolute; bottom: 5px; z-index: 10; width: 100%; height: 24px; text-align: right; }
+                .img-slide .controller li { display: inline-block; width: 10px; height: 10px; margin: 5px; border-radius: 10px; background-color: #fff; line-height: 100px; overflow: hidden; }
+                    .img-slide .controller li.current { background-color: #f00; }
+        .ui-list li h4 { font-size: 18px; }
+        .ui-nowrap { white-space: normal; text-overflow: initial; max-width: 100%; }
+        .ui-list-info { }
+            .ui-list-info p { font-size: 12px; }
+        .ui-list-link > li:after { content: ""; }
+        .ui-nowrap { white-space: normal; text-overflow: initial; max-width: 100%; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; text-overflow: ellipsis; word-break: break-word; -webkit-line-clamp: 2; }
+
+        .list_item { display: block; padding: 15px 15px 10px 10px; overflow: hidden; position: relative; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+            .list_item .cover { float: left; margin-right: 10px; }
+            .list_item .cont { overflow: hidden; }
+                .list_item .cont .title { font-weight: 400; font-size: 16px; color: #000; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; }
+                .list_item .cont .desc { margin-top: 4%; font-size: 13px; color: #999; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.3; }
+            .list_item:after { content: " "; position: absolute; bottom: 0; width: 100%; height: 1px; border-bottom: 1px solid #e2e2e2; -webkit-transform-origin: 0 100%; -ms-transform-origin: 0 100%; transform-origin: 0 100%; -webkit-transform: scaleY(.5); -ms-transform: scaleY(.5); transform: scaleY(.5); left: 10px; }
+            .list_item .cover .img { display: block; width: 80px; height: 60px; }
+    </style>
+</head>
+<body>
+    <div class="main1">
+        <div class="img-slide">
+            <ul class="st"></ul>
+        </div>
+        <ul class="ui-tab-nav ui-border-b">
+            <li class="current">创意推文</li>
+            <li>微信画报</li>
+            <li>精品H5</li>
+            <li>微楼书</li>
+            <li>事件营销</li>
+        </ul>
+        <div class="cinfo">
+
+        </div>
+        <div class="stinfo" style="display:none;">
+            <a class="list_item js_post" href="{0}">
+                <div class="cover">
+                    <img class="img js_img" src="{1}" alt="">
+                </div>
+                <div class="cont">
+                    <h2 class="title js_title">{2}</h2>
+                    <p class="desc">{3}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="http://ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script>
+    <script src="http://ossweb-img.qq.com/images/js/motion/loader.min.js"></script>
+    <script src="http://ossweb-img.qq.com/images/js/motion/pc-prompt.min.js"></script>
+    <script src="http://ossweb-img.qq.com/images/js/motion/dialog.min.js"></script>
+    <script src="http://ossweb-img.qq.com/images/js/motion/slide.v2.0.min.js"></script>
+    <script src="http://ossweb-img.qq.com/images/js/motion/overlay.min.js"></script>
+    <script src="/wsinfo/js/app.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/js/share.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var t = 0;
+        var el;
+        window.PCPrompt = new mo.PCPrompt();
+        dataForWeixin.title = "案例展示";
+        dataForWeixin.desc = "案例展示";
+        dataForWeixin.img = "http://wsjhb.tencenthouse.com/wsinfo/img/fxs.jpg";
+        var page1, page2, page3, pgae4, page5 = 0;
+        var page = 0;
+        var ist1, ist2, ist3, ist4, ist5, isget = true;
+        var tid = 0;
+        var ticking = false; // rAF 触发锁
+        function onScroll() {
+            if (!ticking) {
+                requestAnimationFrame(realFunc);
+                ticking = true;
+            }
+        }
+        function realFunc() {
+            // do something...
+            if (($(window).scrollTop() + $(window).height() > $(document).height() - 40)) {
+                if (isget) {
+                    page++;
+                    loadinfolist(page);
+                }
+            }
+            ticking = false;
+        }
+        function GetBannerList() {
+            $(".controller").remove();
+            $.post("/wsinfo/ashx/helperInfo.ashx", { type: "getBanner" }, function (result) {
+                var listd = "";
+                if (parseInt(result.count) < 1) {
+                } else {
+                    $.each(result.result, function (i, n) {
+                        //alert(n.img);
+                        listd += "<li style='background-image:url(" + n.img + ");background-size:100% 100%;'><a href='" + n.url + "' style='display:block;'><p>" + n.title + "</p></a></li>";
+                    });
+                    //alert(listd);
+                    $(".st").append(listd);
+                    window.imgSlide = new mo.Slide({
+                        target: $('.img-slide li'),
+                        playTo: 0,
+                        direction: 'x',
+                        controller: true
+                        //autoPlay: true
+                    });
+                }
+            }, "json");
+        }
+        function loadinfolist(page) {
+            //alert(tid);
+            alert(tid);
+            if (page == 0) {
+                $(".cinfo").empty();
+            }
+            $.post("/wsinfo/ashx/helperInfo.ashx", { type: "allist", typid: tid, tmppage: page, pagesize: "8" }, function (result) {
+                var listd = "";
+                var template = $(".stinfo").html();
+                if (parseInt(result.count) < 1) {
+                    isget = false;
+                } else {
+                    $.each(result.result, function (i, n) {
+                        listd += String.format($(".stinfo").html(), n.url, n.img, n.title, n.desc);
+                    });
+                    //alert(listd);
+                    $(".cinfo").append(listd);
+                }
+            }, "json");
+        }
+        $(function () {
+            waiting();
+            GetBannerList();
+            loadinfolist(0);
+            window.addEventListener('scroll', onScroll, false);
+            $(".ui-tab-nav li").tap(function () {
+                
+                var tid1 = $(".ui-tab-nav li").index($(this));
+                $(".ui-tab-nav li").removeClass("current");
+                $(".ui-tab-nav li").eq(tid1).addClass("current");
+                tid = parseInt(tid1);
+               
+                //$(".st").empty();
+                page = 0;
+                ticking = false;
+                isget = true;
+                //GetBannerList();
+                loadinfolist(0);
+            });
+        })
+    </script>
+</body>
+</html>

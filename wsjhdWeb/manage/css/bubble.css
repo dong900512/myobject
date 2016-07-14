@@ -1,0 +1,36 @@
+﻿/*@import url(mob.css);*/
+@import url(mp1.css);
+        *
+        {
+            /*padding-right: 0px;
+            padding-left: 0px;
+            padding-bottom: 0px;
+            margin: 0px;
+            padding-top: 0px;*/
+        }
+        .bubbleInfo
+        {
+            /*left: 100px;
+	    left:0px;
+            width: 500px;*/
+            position: relative;
+            /*top: 150px;*/
+	    top:0px;
+            z-index: 502;
+        }
+        .trigger
+        {
+            position: absolute;
+        }
+        .popup
+        {
+            display: none;
+            z-index: 500;
+            position: absolute;
+            border-collapse: collapse;
+        }
+        .popup TD.corner
+        {
+            width: 19px;
+            height: 15px;
+        }

@@ -1,0 +1,22 @@
+﻿ #luluTip
+        {
+            word-wrap: break-word; /**/ /*自动换行,在FF中对英文和数字无效*/
+            position: absolute;
+            width: 200px;
+            color: #a00;
+            background-color: #FFFFCC;
+            border: 1pxsolid#a00;
+            padding: 10px;
+            display: none; /**/ /*我们先不要让它显示*/
+        }
+        #luluTip div.triangle /**/ /*后代选择器,选择ID为"luluTip"中DIV的类为"triangle"的元素*/
+        {
+            background: transparenturl('../img/sj.gif' )
+                        no-repeatscrolllefttop;
+            position: absolute;
+            height: 17px;
+            left: 20px;
+            top: -16px;
+            width: 31px;
+            z-index: 999;
+        }

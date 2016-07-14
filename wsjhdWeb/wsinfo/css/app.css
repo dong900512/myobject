@@ -1,0 +1,27 @@
+﻿
+ul, ol, dl { list-style: none; -webkit-padding-start: 0px; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, blockquote, th, td, img, button { padding: 0; margin: 0; }
+body, .mui-bar { background-color: White; max-width: 640px; margin: 0 auto; }
+.mui-tab-item img { width: 100%; }
+.mui-content { background-color: White; }
+.tipsimg { width: 90%; margin-left: 5%; }
+.tipsimg:nth-child(1) { margin-top: 3%; }
+.mui-table-view:after, .mui-input-group .mui-input-row:after, .mui-input-group:after { background-color: transparent; }
+.bg { position: relative; width: 100%; height: 100%; z-index: 300; display: none; }
+.cssbtn { background-color: #00d8ff; border: 0; width: 80%; left: 10%; display: none; }
+.ui-loading-bright { background-image: url(/wsinfo/img/loading_sprite_white.png); }
+#waiting { position: fixed; z-index: 99; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2); top: 0px; max-width: 640px; }
+#waiting .bk { position: relative; width: 146px; height: 146px; background-color: #000; opacity: .5; border-radius: 10px; margin: -73px 0 0 -73px; z-index: 0; }
+#waiting .cont { position: relative; width: 146px; height: 146px; position: relative; margin: -146px 0 0 -73px; text-align: center; z-index: 1; }
+#waiting .cont span { text-align: center; color: #fff; font-size: 14pt; }
+
+.strhr { border-bottom: 1px solid #e5e5e5; clear: both; }
+.main { margin-bottom: 56px; }
+
+
+/**轮滑**/
+ul.ui-tab-nav.ui-border-b { height: 45px; line-height: 45px; min-width: 70px; box-flex: 1; -webkit-box-flex: 1; text-align: center; color: #777; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 2px solid transparent; width: 100%; }
+.ui-tab-nav { width: 100%; background-color: #fff; display: box; display: -webkit-box; font-size: 16px; height: 45px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.ui-tab-nav li.current { color: #00a5e0; border-bottom: 2px #00a5e0 solid; }
+.ui-tab-nav li { min-width: 80px !important; cursor: pointer; }
+.ui-tab-nav li { height: 45px; line-height: 45px; min-width: 70px; box-flex: 1; -webkit-box-flex: 1; text-align: center; color: #777; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 2px solid transparent; width: 100%; }

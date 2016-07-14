@@ -18,6 +18,65 @@ public class WebConn
 
     }
     /// <summary>
+    /// 获取信息类别信息
+    /// </summary>
+    public enum ManageInfoType
+    {
+        活动信息 = 0,
+        快递服务 = 1,
+        综合便民服务 = 2,
+        配套热线半岛商业 = 3,
+        配套热线半岛酒店 = 4,
+        半岛美食 = 5,
+        万宁四诊 = 6,
+        其他美食 = 7,
+        特色小吃 = 8,
+        美食餐厅 = 9,
+        高铁 = 10,
+        公共交通 = 11,
+        车租赁 = 12,
+        自驾车租赁 = 13,
+        万宁站租车服务 = 14,
+        自行车租赁 = 15,
+        ucrad租赁 = 16,
+        半岛住宿 = 17,
+        半岛游玩 = 18,
+        游玩类型 = 19,
+        富饶特产 = 20,
+        滨海风情餐饮购物街 = 21,
+        健康管理 = 22,
+        用户注册协议 = 23,
+        兴趣标签 = 24,
+        积分规则 = 25,
+        社区公告 = 26,
+        报修记录 = 27
+    }
+    /// <summary>
+    /// 轮播Banner信息
+    /// </summary>
+    public enum AreSourceId
+    {
+        活动信息 = 0
+    }
+    /// <summary>
+    /// 点赞类别
+    /// </summary>
+    public enum DzType
+    {
+        兴趣爱好 = 0
+    }
+
+    /// <summary>
+    /// Form Type 类别
+    /// </summary>
+    public enum FormInfoType
+    {
+        活动信息 = 0,
+        便民服务 = 1,
+        兴趣爱好 = 2,
+        会员信息 = 8
+    }
+    /// <summary>
     /// 订单状态
     /// </summary>
     public enum OrderStatus

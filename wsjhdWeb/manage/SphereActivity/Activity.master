@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Activity.master.cs" Inherits="NewInfoWeb.manage.SphereActivity.Activity" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="../css/admin_joekoe.css" type="text/css" rel="stylesheet" />
+    <link href="../css/input.css" rel="stylesheet" type="text/css" id="Link2" />
+    <link href="../css/imgshow.css" rel="stylesheet" type="text/css" id="Link1" />
+    <script src="../lib/jquery-1.6.2.js" type="text/javascript"></script>
+    <script src="../lib/common.js" type="text/javascript"></script>
+    <script charset="utf-8" src="/manage/kindeditor-4.1.10/kindeditor.js"></script>
+    <script charset="utf-8" src="/manage/kindeditor-4.1.10/lang/zh_CN.js"></script>
+    <script language="Javascript" type="text/jscript">
+        function confirmsuffix(ele) {
+            if (ele.value == "") return true;
+            var filename = ele.value;
+            var exName = filename.substr(filename.lastIndexOf(".") + 1).toUpperCase();
+            if (exName == "JPG" || exName == "GIF" || exName == "PNG" || exName == "BMP")
+                return true;
+            else {
+                alert("上传文件格式只能是:jpg,gif,png,bmp");
+                ele.select();
+                document.execCommand("delete");
+                ele.form.submit();
+                return false;
+            }
+        }
+
+        function confirmsuffixexe(ele) {
+            if (ele.value == "") return true;
+            var filename = ele.value;
+            var exName = filename.substr(filename.lastIndexOf(".") + 1).toUpperCase();
+            if (exName == "SWF")
+                return true;
+            else {
+                alert("上传文件格式只能是:swf");
+                ele.select();
+                document.execCommand("delete");
+                ele.form.submit();
+                return false;
+            }
+        }
+        function ckupfield() {
+            var i = 0;
+            var idstr = ''; // 将要删除的 srcElement
+
+            for (i = 0; i < document.getElementById('priceinput').rows.length; i++) {
+                var _row = document.getElementById('priceinput').rows[i];
+                var ele = document.getElementById('specName' + _row.rowIndex.toString());
+                if (ele.value == "") {
+                    idstr += ele.id + ',';
+                }
+
+            }
+            var idarr = idstr.split(',');
+
+            for (i = 0; i < idarr.length; i++) {
+                if (idarr[i] != "") {
+
+                    var srcele = document.getElementById(idarr[i]);
+                    var currRowIndex = srcele.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.rowIndex;
+
+                    document.all.priceinput.deleteRow(currRowIndex);
+                }
+
+            }
+
+            if (document.getElementById('priceinput').rows.length < 1) {
+                alert("请至少选择一个图片文件再上传！");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body leftmargin="0" topmargin="0">
+    <form id="form1" runat="server">
+    <div>
+        <center>
+            <!--head-->
+           
+            <!--end-->
+            <table height="2" width="90%">
+                <tbody>
+                    <tr class="bg">
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table" cellspacing="1" cellpadding="4">
+                <tr>
+                    <td class="td" colspan="2" style="height: 24px" align="left">
+                        <asp:Literal ID="ltlTitle" runat="server"></asp:Literal>
+                    </td>
+                </tr>
+                <tr valign="top" align="middle">
+                    <td align="left" colspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            <table height="2" width="90%">
+                <tbody>
+                    <tr class="bg">
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--foot-->
+            &nbsp;</center>
+    </div>
+    </form>
+</body>
+</html>

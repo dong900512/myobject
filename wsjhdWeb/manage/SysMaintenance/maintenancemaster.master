@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="maintenancemaster.master.cs"
+    Inherits="NewInfoWeb.manage.SysMaintenance.maintenancemaster" %>
+
+<%@ Register Src="../controls/syshead.ascx" TagName="syshead" TagPrefix="uc2" %>
+<%@ Register Src="../controls/bottom.ascx" TagName="bottom" TagPrefix="uc1" %>
+<%@ Register src="/manage/controls/bottom.ascx" tagname="bottom" tagprefix="uc3" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>系统帐号管理</title>
+    <link href="../css/admin_joekoe.css" type="text/css" rel="stylesheet" />
+    <link href="../css/input.css" rel="stylesheet" type="text/css" id="css" />
+    <script src="../lib/common.js" type="text/javascript"></script>
+    <link href="../css/admin_joekoe.css" type="text/css" rel="stylesheet" />
+    <link href="../css/input.css" rel="stylesheet" type="text/css" id="Link1" />
+    <script src="../lib/common.js" type="text/javascript"></script>
+    <script src="../lib/meizzDate.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body leftmargin="0" topmargin="0">
+    <form id="form" runat="server" method="post">
+    <div>
+        <center>
+                <uc2:syshead id="syshead1" runat="server"></uc2:syshead>
+                <table height="2" width="90%">
+                    <tbody>
+                        <tr class="bg">
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table" cellspacing="1" cellpadding="4">
+                    <tbody>
+                        <tr>
+                            <td class="td" colspan="2" style="height: 24px">
+                                <asp:Literal ID="ltlTitle" runat="server"></asp:Literal></td>
+                        </tr>
+                        <tr valign="top" align="middle">
+                            <td width="120px" align="center">
+                                <img src="../img/VirusAlert.jpg" /></td>
+                            <td>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table height="2" width="90%">
+                    <tbody>
+                        <tr class="bg">
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <uc1:bottom ID="Bottom1" runat="server" />
+                <uc3:bottom ID="bottom2" runat="server" />
+            </center>
+    </div>
+    </form>
+</body>
+</html>

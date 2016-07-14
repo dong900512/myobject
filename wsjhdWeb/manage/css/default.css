@@ -1,0 +1,146 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; SCROLLBAR-FACE-COLOR: #eeeeee; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #dee3e7; SCROLLBAR-3DLIGHT-COLOR: #d1d7dc; SCROLLBAR-ARROW-COLOR: #000000; PADDING-TOP: 0px; SCROLLBAR-TRACK-COLOR: #ededed; FONT-FAMILY: Tahoma, Verdana; SCROLLBAR-DARKSHADOW-COLOR: #808080; BACKGROUND-COLOR: #ffffff
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+INPUT {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 1px; PADDING-LEFT: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-LEFT-COLOR: #c0c0c0; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #c0c0c0; PADDING-BOTTOM: 1px; COLOR: #000000; BORDER-TOP-COLOR: #c0c0c0; PADDING-TOP: 1px; FONT-FAMILY: Tahoma, Verdana, "宋体"; HEIGHT: 19px; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #c0c0c0
+}
+TEXTAREA {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-LEFT-COLOR: #c0c0c0; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #c0c0c0; COLOR: #000000; BORDER-TOP-COLOR: #c0c0c0; FONT-FAMILY: Tahoma, Verdana, "宋体"; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #c0c0c0
+}
+subject {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-LEFT-COLOR: #c0c0c0; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #c0c0c0; COLOR: #000000; BORDER-TOP-COLOR: #c0c0c0; FONT-FAMILY: Tahoma, Verdana, "宋体"; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #c0c0c0
+}
+SELECT {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Tahoma, Verdana, "宋体"; BACKGROUND-COLOR: #ffffff
+}
+TABLE {
+	FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY: Tahoma, Verdana, "宋体"
+}
+.table1 {
+	FONT-SIZE: 12px; WORD-BREAK: break-all; FONT-FAMILY: Tahoma, Verdana, "宋体"; BACKGROUND-COLOR: #ffffff
+}
+.td1 {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px; FONT-SIZE: 12px; PADDING-BOTTOM: 12px; PADDING-TOP: 12px
+}
+.td2 {
+	PADDING-RIGHT: 12px; PADDING-LEFT: 12px; FONT-SIZE: 12px; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; BACKGROUND-COLOR: #f5f7f8
+}
+.colorfocus {
+	BORDER-RIGHT: #4b4b6f 1px double; BORDER-TOP: #4b4b6f 1px double; BORDER-LEFT: #4b4b6f 1px double; BORDER-BOTTOM: #4b4b6f 1px double; BACKGROUND-COLOR: #ffeec2
+}
+.colorblur {
+	BORDER-RIGHT: #cccccc 1px double; BORDER-TOP: #cccccc 1px double; BORDER-LEFT: #cccccc 1px double; BORDER-BOTTOM: #cccccc 1px double; BACKGROUND-COLOR: #ffffff
+}
+A:link {
+	COLOR: #003366; FONT-FAMILY: Tahoma, Verdana, "宋体"; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #003366; FONT-FAMILY: Tahoma, Verdana, "宋体"; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff9900; FONT-FAMILY: Tahoma, Verdana, "宋体"; TEXT-DECORATION: none
+}
+.ImageTextButtonTree {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 3px; BACKGROUND-POSITION: 1px 1px; BORDER-TOP: #cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 22px; FONT-SIZE: 12px; PADDING-BOTTOM: 1px; MARGIN: 1px; BORDER-LEFT: #cccccc 1px solid; CURSOR: pointer; COLOR: #333333; LINE-HEIGHT: normal; PADDING-TOP: 0px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-REPEAT: no-repeat; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.ImageTextButtonTree:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonTree:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonTree:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonTree:hover {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.ImageTextButton {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 3px; BACKGROUND-POSITION: 1px 1px; BORDER-TOP: #cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 22px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; MARGIN: 1px; BORDER-LEFT: #cccccc 1px solid; CURSOR: pointer; COLOR: #333333; LINE-HEIGHT: normal; PADDING-TOP: 3px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Arial, Helvetica; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.ImageTextButton:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButton:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButton:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButton:hover {
+	CURSOR: pointer; COLOR: #666666; TEXT-DECORATION: none
+}
+.ImageTextButtonEx 
+{
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 3px; BACKGROUND-POSITION: 1px 1px; BORDER-TOP: #cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 22px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; MARGIN: 1px; BORDER-LEFT: #cccccc 1px solid; CURSOR: pointer; COLOR: #333333; LINE-HEIGHT: normal; PADDING-TOP: 3px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Arial, Helvetica; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:hover {
+	CURSOR: pointer; COLOR: #666666; TEXT-DECORATION: none
+}
+
+/*
+.ImageTextButtonEx 
+{
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 3px; BACKGROUND-POSITION: 1px 1px; BORDER-TOP: #cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 22px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; MARGIN: 1px; BORDER-LEFT: #cccccc 1px solid; CURSOR: pointer; COLOR: #333333; LINE-HEIGHT: normal; PADDING-TOP: 3px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Arial, Helvetica; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+.ImageTextButtonEx a:hover {
+	CURSOR: pointer; COLOR: #666666; TEXT-DECORATION: none
+}*/
+
+.TextButton {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 10px; BACKGROUND-POSITION: 1px 1px; BORDER-TOP: #cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; MARGIN: 1px; BORDER-LEFT: #cccccc 1px solid; CURSOR: pointer; COLOR: #333333; LINE-HEIGHT: normal; PADDING-TOP: 3px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Arial, Helvetica; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.TextButton:link {
+	COLOR: black; TEXT-DECORATION: none
+}
+.TextButton:visited {
+	COLOR: black; TEXT-DECORATION: none
+}
+.TextButton:active {
+	COLOR: black; TEXT-DECORATION: none
+}
+.TextButton:hover {
+	CURSOR: pointer; COLOR: #666666; TEXT-DECORATION: none
+}
+.RoundImageButtonLeft {
+	BACKGROUND-POSITION: left top; PADDING-LEFT: 4px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/xpbuttonbg_l.gif); MARGIN-LEFT: 4px; CURSOR: pointer; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: left
+}
+.RoundImageButtonRight {
+	PADDING-RIGHT: 9px; BACKGROUND-POSITION: right top; DISPLAY: inline-block; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-IMAGE: url(../images/xpbuttonbg_r.gif); PADDING-BOTTOM: 5px; CURSOR: pointer; COLOR: #444444; PADDING-TOP: 3px; BACKGROUND-REPEAT: no-repeat; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.RoundImageButtonRight:link {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+.RoundImageButtonRight:visited {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+.RoundImageButtonRight:active {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+.RoundImageButtonRight:hover {
+	CURSOR: pointer; COLOR: #666666; TEXT-DECORATION: none
+}
